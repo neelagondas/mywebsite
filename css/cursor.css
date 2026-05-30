@@ -1,0 +1,72 @@
+.cursor-outer {
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #600EE4;
+    box-sizing: border-box;
+    z-index: 10000000;
+    opacity: 0.5;
+    transition: all 0.08s ease-out;
+    cursor: none;
+}
+
+.mouseCursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translateZ(0);
+    visibility: hidden;
+    text-align: center;
+    cursor: none;
+}
+
+.cursor-inner {
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    z-index: 10000001;
+    background-color: #600EE4;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    & a {
+        color: #fff;
+        line-height: 100px;
+        transform: scale(0);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-left: 3px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &.cursor-big {
+        cursor: none;
+        & a {
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.mouseCursor.cursor-big {
+    width: 100px;
+    height: 100px;
+    cursor: none;
+}
+
+.mouseCursor.cursor-big {
+    cursor: none;
+    &.cursor-outer {
+        display: none;
+    }
+}
+
+.tp-cursor-point-area {
+    cursor: none;
+}

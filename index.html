@@ -1,13 +1,1314 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </body>
-</html>
+<!DOCTYPE html><html class="no-js" lang="zxx"><head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Softec | SaaS, Software & Technology Tailwind Template</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+   <!-- CSS here -->
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/nice-select.css">
+   <link rel="stylesheet" href="css/flaticon.css">
+   <link rel="stylesheet" href="css/swiper-bundle.css">
+   <link rel="stylesheet" href="css/font-awesome-pro.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/cursor.css">
+</head>
+
+<body>
+
+   <!-- preloader -->
+   <div id="preloader" class="fixed top-0 left-0 right-0 bottom-0 bg-[#f7f7f7] z-[999999]">
+      <div class="preloader absolute top-1/2 left-1/2 w-[50px] h-[50px] -translate-x-1/2 -translate-y-1/2">
+         <span class="absolute inline-block w-[50px] h-[50px] rounded-full bg-blue animate-[preloader_1.3s_linear_infinite]"></span>
+         <span class="absolute inline-block w-[50px] h-[50px] rounded-full bg-blue animate-[preloader_1.3s_linear_infinite] [animation-delay:-0.9s]"></span>
+      </div>
+   </div>
+   <!-- preloader end  -->
+
+   <!-- back-to-top-start  -->
+   <div class="back-to-top-wrapper group/show">
+      <button id="back_to_top" type="button" class="scroll-top group-[.back-to-top-btn-show]/show:bottom-[80px] fixed right-[50px] bottom-[-10%] h-[50px] w-[50px] rounded-[6px] text-[16px] text-center cursor-pointer z-[9] border-0 bg-primary text-white transition-all duration-1000 ease-in-out">
+         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+         </svg>
+      </button>
+   </div>
+   <!-- back-to-top-end  -->
+
+   <div class="mouseCursor cursor-outer"></div>
+   <div class="mouseCursor cursor-inner"><a href="#"><i class="fas fa-play"></i></a></div>
+
+   <!-- search popup start -->
+   <div class="search-popup group/search [&.search-opened]:translate-y-0 delay-0 fixed inset-0 z-[9999] bg-[rgba(0,_0,_0,_0.9)] pt-[70px] pb-[100px] translate-y-[calc(-100%-80px)] transition-transform duration-700 ease-in-out">
+      <div class="mx-auto max-w-[1200px] px-[15px]">
+         <div class="flex justify-between items-center mb-20">
+            <!-- Logo -->
+            <a href="index.html">
+               <img src="images/logo-white.png" alt="">
+            </a>
+            <!-- Close Button -->
+            <button type="button" class="text-white/30 hover:text-white transition search-close-btn cursor-pointer">
+               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <!-- Search Form -->
+         <form action="#">
+            <div class="relative h-20 opacity-0 translate-y-5 transition-all duration-500 group-[.search-opened]/search:opacity-100 group-[.search-opened]/search:translate-y-0 group-[.search-opened]/search:delay-300">
+               <input type="text" placeholder="Type here to search..." class="w-full h-full bg-transparent outline-none border-0 border-b border-[rgba(255,_255,_255,_0.3)] rounded-none focus:border-orange text-white text-2xl placeholder-white/50 placeholder:text-2xl pr-8">
+               <!-- Search Icon -->
+               <button type="submit" class="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 text-white">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                     <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5"></path>
+                     <path d="M19 19L17.2 17.2" stroke="currentColor" stroke-width="1.5"></path>
+                  </svg>
+               </button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <!-- search popup end -->
+
+   <!-- Offcanvas Area -->
+   <div class="fixed inset-0 z-[999] invisible opacity-0 transition-all duration-500 ease-in-out bg-[rgba(24,_24,_24,_0.6)] body-overlay hover:cursor-[url('../img/cross-out.png')_16_16,_pointer] [&.apply]:opacity-100 [&.apply]:visible"></div>
+
+   <div class="tpoffcanvas fixed top-0 right-[-100%] h-full max-lg-w-[480px] bg-black z-[9999] p-[50px] overflow-y-auto opacity-0 invisible transition-all duration-700 ease-[cubic-bezier(0.785,0.135,0.15,0.86)] max-sm:w-[100%] max-sm:p-[35px] sm:p-[40px] [&.opened]:opacity-100 [&.opened]:visible [&.opened]:right-0">
+      <!-- Close Button -->
+      <button class="close-btn cursor-pointer absolute top-0 right-0 w-[50px] h-[50px] bg-white text-black  flex items-center justify-center transition-all duration-300">
+         <i class="fal fa-times text-[30px] font-light"></i>
+      </button>
+      <!-- Logo -->
+      <div class="mb-10 text-center">
+         <a href="index.html">
+            <img src="images/logo-white.png" class="w-[157px] mx-auto" alt="">
+         </a>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="tp-offcanvas-menu mb-[50px]">
+         <nav></nav>
+      </div>
+      <!-- Instagram -->
+      <div class="mb-[50px] text-center max-sm:text-left">
+         <h4 class="text-white capitalize mb-[30px]">instagram</h4>
+         <div class="flex flex-wrap justify-center max-sm:justify-start">
+            <a href="#"><img class="w-[80px] m-[5px] mb-[15px]" src="images/project-inner-4.jpg" alt="image"></a>
+            <a href="#"><img class="w-[80px] m-[5px] mb-[15px]" src="images/project-inner-5.jpg" alt="image"></a>
+            <a href="#"><img class="w-[80px] m-[5px] mb-[15px]" src="images/project-inner-6.jpg" alt="image"></a>
+            <a href="#"><img class="w-[80px] m-[5px] mb-[15px]" src="images/project-inner-7.jpg" alt="image"></a>
+         </div>
+      </div>
+      <!-- Address -->
+      <div class="mb-10 text-center">
+         <h4 class="text-white pb-[10px]">we are here</h4>
+         <a href="#" class="text-white/60 leading-tight hover:text-white"> 27 Division St, New York,<br>NY 10002, USA</a>
+      </div>
+      <!-- Social -->
+      <div class="text-center">
+         <div class="flex justify-center gap-[15px] max-sm:gap-[5px]">
+            <a class="w-[50px] h-[50px] flex items-center justify-center rounded-[10px] bg-white text-indigo-500 transition hover:bg-indigo-500 hover:text-white" href="#">
+               <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.403 9.03129C2.34293 9.03129 1.02128 9.03129 0.420526 9.03129C0.100125 9.03129 0 8.91114 0 8.61076C0 7.80976 0 6.98874 0 6.18773C0 5.86733 0.12015 5.76721 0.420526 5.76721H2.403C2.403 5.70713 2.403 4.54568 2.403 4.00501C2.403 3.20401 2.54318 2.44305 2.94368 1.74218C3.3642 1.02128 3.96496 0.540676 4.72591 0.260325C5.22653 0.0801 5.72716 0 6.26783 0H8.23029C8.51064 0 8.63079 0.12015 8.63079 0.400501V2.68335C8.63079 2.9637 8.51064 3.08385 8.23029 3.08385C7.68961 3.08385 7.14894 3.08385 6.60826 3.10388C6.06758 3.10388 5.78723 3.36421 5.78723 3.92491C5.76721 4.52566 5.78723 5.10638 5.78723 5.72716H8.11014C8.43054 5.72716 8.55069 5.84731 8.55069 6.16771V8.59074C8.55069 8.91114 8.45056 9.01126 8.11014 9.01126C7.38924 9.01126 5.84731 9.01126 5.78723 9.01126V15.5394C5.78723 15.8798 5.68711 16 5.32666 16C4.48561 16 3.66458 16 2.82353 16C2.52315 16 2.403 15.8799 2.403 15.5795C2.403 13.4768 2.403 9.09136 2.403 9.03129Z" fill="currentColor"></path>
+               </svg>
+            </a>
+            <a class="w-[50px] h-[50px] flex items-center justify-center rounded-[10px] bg-white text-indigo-500 transition hover:bg-indigo-500 hover:text-white" href="#">
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.60319 6.77491L15.4315 0H14.0504L8.98966 5.88256L4.94769 0H0.285767L6.39801 8.89547L0.285767 16H1.66696L7.01119 9.78782L11.2798 16H15.9417L9.60285 6.77491H9.60319ZM7.71145 8.97384L7.09216 8.08805L2.16463 1.03974H4.28606L8.26263 6.72795L8.88193 7.61374L14.051 15.0075H11.9296L7.71145 8.97418V8.97384Z" fill="currentColor"></path>
+               </svg>
+            </a>
+            <a class="w-[50px] h-[50px] flex items-center justify-center rounded-[10px]  bg-white text-indigo-500 transition hover:bg-indigo-500 hover:text-white" href="#">
+               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.1428 1H5.14282C2.93368 1 1.14282 2.79086 1.14282 5V13C1.14282 15.2091 2.93368 17 5.14282 17H13.1428C15.352 17 17.1428 15.2091 17.1428 13V5C17.1428 2.79086 15.352 1 13.1428 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12.3431 8.49624C12.4418 9.16204 12.3281 9.84201 12.0181 10.4395C11.7081 11.0369 11.2176 11.5214 10.6164 11.824C10.0151 12.1266 9.33381 12.2319 8.66928 12.125C8.00475 12.0181 7.39086 11.7043 6.91492 11.2284C6.43899 10.7524 6.12524 10.1385 6.01831 9.47401C5.91137 8.80948 6.0167 8.12816 6.31931 7.52694C6.62192 6.92572 7.1064 6.43523 7.70384 6.12523C8.30128 5.81523 8.98126 5.70151 9.64705 5.80024C10.3262 5.90095 10.9549 6.21741 11.4404 6.70289C11.9259 7.18836 12.2423 7.8171 12.3431 8.49624Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M13.5424 4.60059H13.5504" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </a>
+            <a class="w-[50px] h-[50px] flex items-center justify-center rounded-[10px]  bg-white text-indigo-500 transition hover:bg-indigo-500 hover:text-white" href="#">
+               <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.743794 5.331C0.743794 5.331 2.28009 4.12018 2.79238 4.72531C3.3041 5.331 5.25871 12.64 5.91139 13.9878C6.48098 15.1705 8.05166 16.7332 9.77419 15.6169C11.4956 14.5006 17.2213 9.61269 18.2459 3.84055C19.2699 -1.92988 11.3563 -0.721354 10.518 4.30642C12.613 3.04862 13.7315 4.81699 12.6594 6.82031C11.589 8.82133 10.6108 10.1261 10.0997 10.1261C9.58853 10.1261 9.19543 8.78695 8.60979 6.44669C8.00524 4.02735 8.00811 -0.330546 5.49193 0.163406C3.11843 0.62928 0 4.35341 0 4.35341L0.743794 5.331Z" fill="currentColor"></path>
+               </svg>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!-- tp-offcanvus-area-end -->
+
+   <!-- tp-header-area-start -->
+   <header>
+
+      <!-- header main start -->
+      <div id="header-sticky" class="absolute group/sticky bg-white left-0 right-0 z-10 max-lg:pt-[15px] max-lg:pb-[15px] [&.header-sticky]:fixed [&.header-sticky]:top-0 [&.header-sticky]:left-0 [&.header-sticky]:right-0 [&.header-sticky]:w-full [&.header-sticky]:opacity-100 [&.header-sticky]:visible [&.header-sticky]:shadow-[0px_8px_24px_rgba(149,157,165,0.2)] [&.header-sticky]:z-[999] [&.header-sticky]:animate-[headerSlideDown_0.95s_ease_0s_forwards_1]">
+         <div class="mx-auto max-w-[1305px] px-[15px]">
+            <div class="grid grid-cols-12 gap-x-[30px] items-center">
+               <div class="xxl:col-span-2 xl:col-span-2 lg:col-span-2 col-span-6">
+                  <a href="index.html">
+                     <img src="images/logo-black.png" alt="">
+                  </a>
+               </div>
+               <div class="xxl:col-span-8 xl:col-span-7 lg:col-span-8 hidden lg:block">
+                  <div class="main-menu hidden lg:block text-center">
+                     <nav class="tp-mobile-menu-active inline-block text-left">
+                        <ul class="lg:flex items-center xl:*:mx-[24px] lg:*:mx-[15px]">
+                           <li class="relative has-dropdown group">
+                              <a href="index.html" class="relative lg:py-[30px] max-lg:py-[15px] max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 group-hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]"> 
+                                 Home
+                              </a>
+                              <!-- Submenu -->
+                              <ul class="tp-submenu lg:absolute lg:top-full lg:left-0 lg:w-60 lg:bg-white lg:py-7 lg:shadow-[0_8px_20px_rgba(61,110,168,0.2)] lg:opacity-0 lg:invisible lg:scale-y-0 lg:origin-top lg:transition-all lg:duration-400 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:scale-y-100 max-lg:hidden">
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="index.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Data analytics
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="index-2.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Payment Gateway
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="index-3.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       CRM Software
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="index-4.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Security Software
+                                    </a>
+                                 </li>
+                                 <li class="lg:px-10 max-lg:pl-5">
+                                    <a href="index-5.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Saas
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="relative has-dropdown">
+                              <a href="about.html" class="relative lg:py-[30px] max-lg:py-[15px] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 hover:text-primary group-[.header-sticky]/sticky:p-[30px_0] "> 
+                                 About
+                              </a>
+                           </li>
+                           <li class="relative has-dropdown group">
+                              <a href="#" class="relative lg:py-[30px] max-lg:py-[15px] max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 group-hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]"> 
+                                 Page
+                              </a>
+                              <!-- Submenu -->
+                              <ul class="tp-submenu lg:absolute lg:top-full lg:left-0 lg:w-60 lg:bg-white lg:py-7 lg:shadow-[0_8px_20px_rgba(61,110,168,0.2)] lg:opacity-0 lg:invisible lg:scale-y-0 lg:origin-top lg:transition-all lg:duration-400 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:scale-y-100 max-lg:hidden">
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="about.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       About
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="service.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Service
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="service-details.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Service Details
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="team.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Team
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="team-details.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Team Details
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="career.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Career
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="career-details.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Career Details
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="integrations.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Integrations
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="price.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Price
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="register.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Register
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="sign-in.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       Signin
+                                    </a>
+                                 </li>
+                                 <li class="lg:px-10 max-lg:pl-5">
+                                    <a href="404.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors ease-in-out font-mont duration-300 hover:text-blue">
+                                       404
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="relative has-dropdown">
+                              <a href="price.html" class="relative lg:py-[30px] max-lg:py-[15px] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 hover:text-primary group-[.header-sticky]/sticky:p-[30px_0] "> 
+                                 Pricing
+                              </a>
+                           </li>
+                           <li class="relative has-dropdown group">
+                              <a href="index.html" class="relative lg:py-[30px] max-lg:py-[15px] max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 group-hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]"> 
+                                 Blog
+                              </a>
+                              <!-- Submenu -->
+                              <ul class="tp-submenu lg:absolute lg:top-full lg:left-0 lg:w-60 lg:bg-white lg:py-7 lg:shadow-[0_8px_20px_rgba(61,110,168,0.2)] lg:opacity-0 lg:invisible lg:scale-y-0 lg:origin-top lg:transition-all lg:duration-400 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:scale-y-100 max-lg:hidden">
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="blog.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Blog
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="blog-list.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Blog List
+                                    </a>
+                                 </li>
+                                 <li class="lg:mb-4 lg:px-10 max-lg:pl-5">
+                                    <a href="blog-details.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Blog Details
+                                    </a>
+                                 </li>
+                                 <li class="lg:px-10 max-lg:pl-5">
+                                    <a href="blog-details-2.html" class="block lg:text-black max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] max-lg:py-[15px] max-lg:text-white text-[14px] font-medium capitalize transition-colors duration-300 hover:text-blue">
+                                       Blog Details 02
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="relative has-dropdown">
+                              <a href="contact.html" class="relative lg:py-[30px] max-lg:py-[15px] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]"> 
+                                 Contact
+                              </a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="xxl:col-span-2 xl:col-span-3 lg:col-span-2 col-span-6">
+                  <div class="flex items-center justify-end">
+                     <a href="register.html" class="tp-btn-hover group relative hidden md:inline-block bg-[#FFCE5A] text-black h-[42px] leading-[38px] rounded-[30px] xl:px-[32px] max-xl:px-[18px] text-[16px] font-medium text-center capitalize overflow-hidden transition-colors duration-500 ease-in-out z-[2] border border-transparent hover:border-black">
+                        <span class="relative z-[5] transition-all duration-500 delay-100 group-hover:text-white">Sign up Now</span>
+                        <b class="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-black transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[700ms] ease-[ease] z-[1] group-hover:w-[400px] group-hover:h-[400px]"></b>
+                     </a>
+                     <button class="tp-menu-bar ml-[15px] cursor-pointer lg:hidden h-[45px] w-[45px] rounded-full flex items-center justify-center bg-white text-black text-[18px] max-lg:border max-lg:border-[rgba(000,000,000,0.06)] border border-transparent hover:bg-black hover:text-white  group-[.header-sticky]/sticky:border-[rgba(1,16,61,0.1)]">
+                        <i class="fal fa-bars"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header main end -->
+      
+   </header>
+   <!-- tp-header-area-end -->
+
+   <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+         <main>
+
+            <!-- tp-hero-area-start -->
+            <div class="relative bg-[#f5f5f7] overflow-hidden xl:pt-[270px] xl:pb-[170px] lg:pt-[210px] lg:pb-[150px] md:pt-[160px] md:pb-[100px] max-md:pt-[160px] max-md:pb-[100px]">
+               <div class="absolute top-[14%] left-[-3%] animate-[moving_9s_linear_infinite]">
+                  <img src="images/hero-circle-5-1.png" alt="">
+               </div>
+               <div class="absolute top-[27%] left-[3%] animate-[movingleftright1_18s_linear_infinite]">
+                  <img src="images/hero-circle-5-2.png" alt="">
+               </div>
+               <div class="absolute bottom-[12%] left-[45%] animate-[moving_9s_linear_infinite]">
+                  <img src="images/hero-circle-5-3.png" alt="">
+               </div>
+               <div class="mx-auto max-w-[1305px] px-[15px]">
+                  <div class="grid grid-cols-12 items-center">
+                     <div class="col-span-12 xl:col-span-7 lg:col-span-6 order-2">
+                        <div class="relative z-10">
+                           <h3 class="hero-text-anim-2 mb-[10px] text-black font-[200] 2xl:text-[74px] xxl:text-[65px] lg:leading-[0.85] lg:tracking-[-0.03em] overflow-hidden xl:text-[55px] lg:text-[47px] md:text-[57px] md:leading-[0.8] max-md:text-[35px] max-md:leading-[0.8] sm:text-[55px] sm:leading-[0.8]">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">Offer The</i>
+                              </i><br class="max-xxl:hidden">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">
+                                    Best
+                                    <span class="child-1 not-italic relative font-[700] tracking-[-0.03em] text-blue-4">
+                                    Business
+                                    <svg class="absolute left-0 bottom-0" width="300" height="12" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M275.982 1.4409C269.424 1.12484 262.867 0.892429 256.309 0.622849C254.145 0.529889 251.971 0.529918 249.807 0.483438C245.111 0.381188 240.414 0.288218 235.717 0.185959C233.104 0.130186 230.482 0.0651215 227.87 0.0186415C227.107 0.00934547 226.357 3.05176e-05 225.594 3.05176e-05C223.891 3.05176e-05 222.186 0.0185935 220.483 0.0278895C212.737 0.0371855 204.98 0.0464995 197.234 0.0464995C195.384 0.0464995 193.546 0.0836815 191.696 0.102274C187.122 0.148754 182.561 0.204559 177.998 0.251039C172.842 0.306819 167.696 0.325359 162.54 0.436918C154.2 0.604239 145.872 0.780908 137.531 0.948238C132.7 1.0505 127.88 1.10624 123.048 1.26427C114.731 1.54315 106.424 1.81274 98.1069 2.08232C93.567 2.23106 89.0159 2.35193 84.4759 2.56573C75.8782 2.96546 67.2803 3.35586 58.6825 3.75559C54.0866 3.9694 49.4906 4.12743 44.9058 4.45279C36.3417 5.05703 27.7888 5.66128 19.2246 6.26552C17.3749 6.39566 15.5254 6.52579 13.6758 6.65593C9.97655 6.91622 6.29982 7.32527 2.61185 7.66922C2.37644 7.69711 2.15225 7.72501 1.91685 7.7436C1.47968 7.84586 1.08733 8.03176 0.762257 8.30134C0.280242 8.70107 0 9.25882 0 9.82592C0 10.3929 0.280242 10.9507 0.762257 11.3597C1.19943 11.7222 1.96169 12.0569 2.61185 11.9919C7.06208 11.5735 11.5011 11.1366 15.9513 10.8206C20.0877 10.5324 24.2128 10.2349 28.3493 9.94672C32.8555 9.63072 37.3618 9.31462 41.8681 8.99854C43.684 8.86839 45.5 8.70109 47.3272 8.61743C54.3557 8.29207 61.3841 7.97597 68.4125 7.65061C72.7955 7.4461 77.1785 7.25092 81.5614 7.0464C83.3774 6.96274 85.1822 6.86047 86.9981 6.79539C93.9593 6.563 100.932 6.34917 107.893 6.13536C112.119 6.00522 116.333 5.86578 120.56 5.73564C121.983 5.68916 123.396 5.63337 124.819 5.60548C132.341 5.45675 139.863 5.31734 147.384 5.1779C151.588 5.09424 155.781 5.01986 159.985 4.9362C161.475 4.90831 162.977 4.86181 164.468 4.85251C172.225 4.78744 179.982 4.7224 187.739 4.65733C192.582 4.61085 197.413 4.57365 202.256 4.58295C210.495 4.60154 218.734 4.61082 226.962 4.62941C228.588 4.62941 230.213 4.68523 231.838 4.73171C236.389 4.84327 240.929 4.9548 245.481 5.06636C248.888 5.15002 252.296 5.23364 255.715 5.31731C258.136 5.37308 260.546 5.52184 262.967 5.6334C270.085 5.94946 277.204 6.28414 284.311 6.64668C286.115 6.73964 287.92 6.85116 289.725 6.96272C291.664 7.07427 293.603 7.19512 295.531 7.37174C295.834 7.40893 296.125 7.45543 296.428 7.5112C297.191 7.64135 297.919 7.60416 298.603 7.2788C299.231 6.97204 299.701 6.46075 299.903 5.8751C300.307 4.64803 299.41 3.33726 297.93 2.99331C296.63 2.69584 295.284 2.57504 293.951 2.46349C293.032 2.38912 292.124 2.30546 291.204 2.23109C289.445 2.08236 287.674 2.00794 285.913 1.89639C282.607 1.71977 279.289 1.59893 275.982 1.4409Z" fill="#6B14FA"></path>
+                                    </svg>
+                                    </span>
+                                 </i>
+                              </i><br class="max-xxl:hidden">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">
+                                    <span class="child-2 not-italic font-[700] tracking-[-0.03em]">Management</span> With <br class="md:hidden">
+                                 </i>
+                              </i>
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">
+                                    Software
+                                 </i>
+                              </i>
+                           </h3>
+                           <p class="pb-[45px] max-md:text-[15px] max-md:leading-[24px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                              A simple solution for building the optimal work
+                              <br class="max-md:hidden">
+                              schedule for your business.
+                           </p>
+                           <div class="flex items-center gap-[15px] md:mb-[40px] max-sm:flex-wrap max-md:mb-[30px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                              <a href="#" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-white bg-blue-4 rounded-[100px] shadow-[inset_-2px_-2px_2px_rgba(7,13,29,0.3)] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent">
+                                 <span class="relative z-[5] transition-[0.5s]">Get Started</span>
+                              </a>
+                              <a href="service-details.html" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-black bg-white rounded-[100px] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent hover:text-white">
+                                 <span class="relative z-[5]  transition-[0.5s]">Try a Demo</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="absolute 3xl:top-0 3xl:right-0 2xl:top-[-2%] 2xl:right-[-5%] xxl:top-[-6%] xxl:right-[-8%] xl:top-[-6%] xl:right-[-20%] lg:top-[-12%] lg:right-[-25%] max-lg:static">
+                  <div class="h-full w-full overflow-hidden bg-center bg-no-repeat [mask-image:url('../img/hero/hero-5.svg')] [-webkit-mask-image:url('../img/hero/hero-5.svg')] 3xl:scale-100 2xl:scale-[0.9] xxl:scale-[0.8] xl:scale-[0.8] lg:scale-[0.8] max-lg:[mask-image:none] max-lg:[-webkit-mask-image:none] max-sm:[mask-image:none] max-sm:[-webkit-mask-image:none]">
+                     <img class="mt-[60px] max-lg:mt-0 max-w-full" src="images/hero-shape-5-1-1.png" alt="">
+                  </div>
+                  <div class="hidden md:block absolute xl:top-[32%] xl:left-[35%] lg:top-[40%] lg:left-[38%] md:top-[52%] md:left-[38%] animate-[tptranslateX2_4s_infinite_alternate]">
+                     <img class="max-xxl:w-[70%] max-xl:w-[60%] max-lg:w-full" src="images/home-shape-1-1.png" alt="">
+                  </div>
+                  <div class="hidden md:block absolute xxl:bottom-[11%] xxl:left-[7%] xl:bottom-[19%] xl:left-[17%] lg:bottom-[30%] lg:left-[30%] max-lg:bottom-[11%] max-lg:left-[7%] animate-[tpupdown_1.5s_infinite_alternate]">
+                     <img class="h-full xxl:w-full xl:w-[80%] lg:w-[60%] rounded-[24px] shadow-[0px_30px_50px_rgba(18,17,22,0.04)] backdrop-blur-[10px]" src="images/home-shape-1-2.png" alt="">
+                  </div>
+               </div>
+            </div>
+            <!-- tp-hero-area-end -->
+
+            <!-- tp-video-area-start -->
+            <div class="tp-vedio-area relative pt-[120px]">
+               <div class="w-full">
+                  <div class="grid grid-cols-12 justify-center">
+                     <div class="col-span-12">
+                        <div class="pb-[70px]">
+                           <h4 class="font-medium xl:text-[60px] leading-[1.1] text-center tracking-[-0.02em] text-black lg:text-[42px] md:text-[42px] max-md:text-[38px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                              The best customer relationship <br>
+                              management platform for just <br>
+                              about everything 
+                           </h4>
+                        </div>
+                        <div class="text-center mx-auto cursor-none">
+                           <a class="popup-video tp-cursor-point-area inline-block" href="https://www.youtube.com/watch?v=yumUbWkA68Q">
+                              <video class="play-video lg:h-[600px] xxl:w-[1290px] object-cover rounded-[30px] cursor-none xl:w-[1170px] lg:w-[960px] md:w-[735px] md:h-[450px] max-sm:w-[300px] max-sm:h-[300px] sm:w-[545px] sm:h-[300px]" id="myVideo" autoplay="" loop="">
+                                 <source src="media/softec-video.mp4" type="video/mp4">
+                              </video>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-video-area-end -->
+
+            <!-- tp-fun-fact-area-start -->
+            <div class="pb-[60px] pt-[100px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-[30px]">
+                     <div class="col-span-12">
+                        <div class="text-center pb-[35px]">
+                           <h4 class="text-[20px] font-medium leading-[20px]">Manufacturing software that goes beyondthe benchmark</h4>
+                        </div>
+                     </div>
+                     <div class="col-span-12 md:col-span-4 mb-[60px] border-r border-r-black/10 max-xl:border-0">
+                        <div class="flex items-center xl:pl-[100px] lg:pl-[30px] max-lg:pl-0">
+                           <h4 class="relative pr-[20px] font-bold xl:text-[50px] leading-[48px] text-black lg:text-[40px] md:text-[31px] max-md:text-[35px] after:content-[''] after:absolute lg:after:top-[-23px] lg:after:left-[-22px] lg:after:h-[100px] lg:after:w-[100px] after:rounded-full after:bg-[linear-gradient(145.27deg,rgba(133,117,224,0.2)_15.55%,rgba(185,173,255,0)_86.81%)] md:after:top-[-15px] md:after:h-[80px] md:after:w-[80px] max-md:after:top-[-17px] max-lg:after:left-[-10px] max-md:after:h-[80px] max-md:after:w-[80px]">
+                              <span data-purecounter-duration="1" data-purecounter-end="23" class="purecounter">0</span>+
+                           </h4>
+                           <p class="font-medium text-[16px] leading-[24px] text-black mb-0 max-sm:[&_br]:hidden">
+                              Years <br> Of Experience
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-span-12 md:col-span-4 mb-[60px] border-r border-r-black/10 max-xl:border-0">
+                        <div class="flex items-center xl:pl-[60px] lg:pl-[30px] max-lg:pl-0">
+                           <h4 class="relative pr-[20px] font-bold xl:text-[50px] leading-[48px] text-black lg:text-[40px] md:text-[31px] max-md:text-[35px] after:content-[''] after:absolute lg:after:top-[-23px] lg:after:left-[-22px] lg:after:h-[100px] lg:after:w-[100px] after:rounded-full after:bg-[linear-gradient(145.27deg,rgba(133,117,224,0.2)_15.55%,rgba(185,173,255,0)_86.81%)] md:after:top-[-15px] md:after:h-[80px] md:after:w-[80px] max-md:after:top-[-17px] max-lg:after:left-[-10px] max-md:after:h-[80px] max-md:after:w-[80px]">
+                              <span data-purecounter-duration="1" data-purecounter-end="300" class="purecounter">0</span>%
+                           </h4>
+                           <p class="font-medium text-[16px] leading-[24px] text-black mb-0 max-sm:[&_br]:hidden">
+                              Year on <br> year Growth
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-span-12 md:col-span-4 mb-[60px]">
+                        <div class="flex items-center xl:pl-[100px] lg:pl-[30px] max-lg:pl-0">
+                           <h4 class="relative pr-[20px] font-bold xl:text-[50px] leading-[48px] text-black lg:text-[40px] md:text-[31px] max-md:text-[35px] after:content-[''] after:absolute lg:after:top-[-23px] lg:after:left-[-22px] lg:after:h-[100px] lg:after:w-[100px] after:rounded-full after:bg-[linear-gradient(145.27deg,rgba(133,117,224,0.2)_15.55%,rgba(185,173,255,0)_86.81%)] md:after:top-[-15px] md:after:h-[80px] md:after:w-[80px] max-md:after:top-[-17px] max-lg:after:left-[-10px] max-md:after:h-[80px] max-md:after:w-[80px]">
+                              <span data-purecounter-duration="1" data-purecounter-end="12" class="purecounter">0</span>+
+                           </h4>
+                           <p class="font-medium text-[16px] leading-[24px] text-black mb-0 max-sm:[&_br]:hidden">                         
+                              Countries<br> Of Operation
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-fun-fact-area-end -->
+
+            <!-- tp-service-area-start -->
+            <div class="relative">
+               <div class="w-full">
+                  <div class="absolute top-0 left-0 lg:w-1/2 max-lg:w-full h-full bg-no-repeat bg-cover z-[-1]" data-background="assets/img/service/service-5-1-bg.png"></div>
+                  <div class="grid grid-cols-12 items-center">
+                     <div class="col-span-12 lg:col-span-6">
+                        <div class="3xl:pl-[350px] 3xl:pr-[60px] 2xl:pl-[170px] 2xl:pr-0 xl:pl-[100px] xl:pr-0 lg:pl-[30px] lg:pr-0 md:pl-[30px] md:pr-0 max-lg:pt-[50px] max-lg:pb-[50px] max-lg:text-center max-md:pl-[30px] max-sm:pl-0 max-md:pr-0 max-md:pt-[40px] max-md:pb-[40px]">
+                           <span class="font-medium text-[14px] tracking-[0.12em] uppercase text-white pb-[15px] inline-block">What we Offer</span>
+                           <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-white tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px] max-md:text-[35px] pb-[23px]">
+                              Get a Live <br class="max-lg:hidden">
+                              Look at Your <br class="max-lg:hidden">
+                              <span class="font-bold">Manufacturing</span> <br class="max-lg:hidden">
+                              <span class="font-bold">Business</span>
+                           </h3>
+                           <p class="font-normal text-[17px] leading-[26px] text-white pb-[35px]">Access the insights you need to move products and <br class="max-lg:hidden">
+                              make decisions.
+                           </p>
+                           <a href="service-details.html" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-black bg-[#FFCE5A] rounded-[100px] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-white after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent hover:text-black">
+                              <span class="relative z-[5]  transition-[0.5s]">View Details</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-span-12 lg:col-span-6">
+                        <div class="grid grid-cols-12">
+                           <div class="col-span-12 md:col-span-6">
+                              <div class="relative transition-all duration-500 3xl:p-[40px_60px] 2xl:p-[40px] xl:p-[30px] max-xl:p-[40px_60px] max-sm:p-[30px] hover:z-[9] group">
+                                 <!-- BG -->
+                                 <div class="absolute inset-0 origin-[50%_100%] shadow-none scale-100 transition-all duration-500 overflow-hidden bg-[#F7F9FB] group-hover:scale-[1.05] group-hover:shadow-[0_16px_40px_rgba(32,33,36,0.1)]">
+                                    <div class="absolute bottom-0 z-10 left-1/2 w-[230%] h-[230%] rounded-full bg-white opacity-100 translate-x-[-50%] translate-y-[50%] scale-0 transition-all duration-500 group-hover:scale-100 "></div>
+                                 </div>
+                                 <!-- Wrapper -->
+                                 <div class="relative translate-y-[50px] transition-all duration-500 group-hover:translate-y-0">
+                                    <div class="mb-[30px] w-[60px] h-[60px]">
+                                       <img src="images/sv-icon-5-1.png" alt="">
+                                    </div>
+                                    <div>
+                                       <h3 class="font-medium 2xl:text-[26px] 3xl:leading-[33px] text-black pb-[13px] xxl:text-[23px] 2xl:leading-[30px] xl:text-[19px] xl:leading-[25px] max-xl:text-[22px] max-xl:leading-[28px]">
+                                          <a href="service-details.html"> Live Inventory <br class="max-lg:hidden"> Management</a>
+                                       </h3>
+                                       <p class="text-[15px] text-[#595B62] opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible">Track materials and stock for outsourced purchase orders</p>
+                                    </div>
+                                 </div>
+                                 <!-- Button -->
+                                 <div class="relative z-[9] text-end mt-[20px]">
+                                    <a href="project-details.html" class="inline-block w-[55px] h-[55px] leading-[50px] text-center rounded-full bg-white text-black font-bold shadow-[0_1px_2px_rgba(32,33,36,0.1)] transition-all duration-300 group-hover:scale-[1.2] group-hover:bg-blue group-hover:text-white group">
+                                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="hover:animate-tp-Left-to-right">
+                                          <path d="M1 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-span-12 md:col-span-6">
+                              <div class="relative transition-all duration-500 3xl:p-[40px_60px] 2xl:p-[40px] xl:p-[30px] max-xl:p-[40px_60px] max-sm:p-[30px] hover:z-[9] group">
+                                 <!-- BG -->
+                                 <div class="absolute inset-0 origin-[50%_100%] shadow-none scale-100 transition-all duration-500 overflow-hidden  bg-white group-hover:scale-[1.05] group-hover:shadow-[0_16px_40px_rgba(32,33,36,0.1)]">
+                                    <div class="absolute bottom-0 z-10 left-1/2 w-[230%] h-[230%] rounded-full bg-[#F7F9FB] opacity-100 translate-x-[-50%] translate-y-[50%] scale-0 transition-all duration-500 group-hover:scale-100 "></div>
+                                 </div>
+                                 <!-- Wrapper -->
+                                 <div class="relative translate-y-[50px] transition-all duration-500 group-hover:translate-y-0">
+                                    <div class="mb-[30px] w-[60px] h-[60px]">
+                                       <img src="images/sv-icon-5-2.png" alt="">
+                                    </div>
+                                    <div>
+                                       <h3 class="font-medium 2xl:text-[26px] 3xl:leading-[33px] text-black pb-[13px] xxl:text-[23px] 2xl:leading-[30px] xl:text-[19px] xl:leading-[25px] max-xl:text-[22px] max-xl:leading-[28px]">
+                                          <a href="service-details.html"> Real-time Master <br class="max-lg:hidden"> Planning</a>
+                                       </h3>
+                                       <p class="text-[15px] text-[#595B62] opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible">Track materials and stock for outsourced purchase orders</p>
+                                    </div>
+                                 </div>
+                                 <!-- Button -->
+                                 <div class="relative z-[9] text-end mt-[20px]">
+                                    <a href="project-details.html" class="inline-block w-[55px] h-[55px] leading-[50px] text-center rounded-full bg-white text-black font-bold shadow-[0_1px_2px_rgba(32,33,36,0.1)] transition-all duration-300 group-hover:scale-[1.2] group-hover:bg-blue group-hover:text-white group">
+                                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="hover:animate-tp-Left-to-right">
+                                          <path d="M1 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-span-12 md:col-span-6">
+                              <div class="relative transition-all duration-500 3xl:p-[40px_60px] 2xl:p-[40px] xl:p-[30px] max-xl:p-[40px_60px] max-sm:p-[30px] hover:z-[9] group">
+                                 <!-- BG -->
+                                 <div class="absolute inset-0 origin-[50%_100%] shadow-none scale-100 transition-all duration-500 overflow-hidden bg-white group-hover:scale-[1.05] group-hover:shadow-[0_16px_40px_rgba(32,33,36,0.1)]">
+                                    <div class="absolute bottom-0 z-10 left-1/2 w-[230%] h-[230%] rounded-full bg-[#F7F9FB] opacity-100 translate-x-[-50%] translate-y-[50%] scale-0 transition-all duration-500 group-hover:scale-100 "></div>
+                                 </div>
+                                 <!-- Wrapper -->
+                                 <div class="relative translate-y-[50px] transition-all duration-500 group-hover:translate-y-0">
+                                    <div class="mb-[30px] w-[60px] h-[60px]">
+                                       <img src="images/sv-icon-5-3.png" alt="">
+                                    </div>
+                                    <div>
+                                       <h3 class="font-medium 2xl:text-[26px] 3xl:leading-[33px] text-black pb-[13px] xxl:text-[23px] 2xl:leading-[30px] xl:text-[19px] xl:leading-[25px] max-xl:text-[22px] max-xl:leading-[28px]">
+                                          <a href="service-details.html"> Easy Contract<br class="max-lg:hidden"> Manufacturing</a>
+                                       </h3>
+                                       <p class="text-[15px] text-[#595B62] opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible">Track materials and stock for outsourced purchase orders</p>
+                                    </div>
+                                 </div>
+                                 <!-- Button -->
+                                 <div class="relative z-[9] text-end mt-[20px]">
+                                    <a href="project-details.html" class="inline-block w-[55px] h-[55px] leading-[50px] text-center rounded-full bg-white text-black font-bold shadow-[0_1px_2px_rgba(32,33,36,0.1)] transition-all duration-300 group-hover:scale-[1.2] group-hover:bg-blue group-hover:text-white group">
+                                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="hover:animate-tp-Left-to-right">
+                                          <path d="M1 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-span-12 md:col-span-6">
+                              <div class="relative transition-all duration-500 3xl:p-[40px_60px] 2xl:p-[40px] xl:p-[30px] max-xl:p-[40px_60px] max-sm:p-[30px] hover:z-[9] group">
+                                 <!-- BG -->
+                                 <div class="absolute inset-0 origin-[50%_100%] shadow-none scale-100 transition-all duration-500 overflow-hidden bg-[#F7F9FB] group-hover:scale-[1.05] group-hover:shadow-[0_16px_40px_rgba(32,33,36,0.1)]">
+                                    <div class="absolute bottom-0 z-10 left-1/2 w-[230%] h-[230%] rounded-full bg-white opacity-100 translate-x-[-50%] translate-y-[50%] scale-0 transition-all duration-500 group-hover:scale-100 "></div>
+                                 </div>
+                                 <!-- Wrapper -->
+                                 <div class="relative translate-y-[50px] transition-all duration-500 group-hover:translate-y-0">
+                                    <div class="mb-[30px] w-[60px] h-[60px]">
+                                       <img src="images/sv-icon-5-4.png" alt="">
+                                    </div>
+                                    <div>
+                                       <h3 class="font-medium 2xl:text-[26px] 3xl:leading-[33px] text-black pb-[13px] xxl:text-[23px] 2xl:leading-[30px] xl:text-[19px] xl:leading-[25px] max-xl:text-[22px] max-xl:leading-[28px]">
+                                          <a href="service-details.html">Omnichannel <br class="max-lg:hidden"> Order Management</a>
+                                       </h3>
+                                       <p class="text-[15px] text-[#595B62] opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible">Track materials and stock for outsourced purchase orders</p>
+                                    </div>
+                                 </div>
+                                 <!-- Button -->
+                                 <div class="relative z-[9] text-end mt-[20px]">
+                                    <a href="project-details.html" class="inline-block w-[55px] h-[55px] leading-[50px] text-center rounded-full bg-white text-black font-bold shadow-[0_1px_2px_rgba(32,33,36,0.1)] transition-all duration-300 group-hover:scale-[1.2] group-hover:bg-blue group-hover:text-white group">
+                                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="hover:animate-tp-Left-to-right">
+                                          <path d="M1 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-service-area-end -->
+
+            <!-- tp-cta-area-start -->
+            <div class="pt-[120px] pb-[120px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-[30px] items-center">
+                     <div class="col-span-12 lg:col-span-7 wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <div class="xl:mr-[70px] lg:mr-[10px] max-xl:mr-0 relative">
+                           <!-- Image 1 -->
+                           <div>
+                              <img src="images/plan-1.png" class="rounded-[30px] w-full" alt="">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="hidden sm:block absolute top-[18%] left-[18%] z-[1]">
+                           <img src="images/plan-2.png" alt="">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="hidden sm:block absolute xl:top-[11%] xl:right-[12%] max-xl:top-[9%] max-xl:right-[7%] animate-[tptranslateX2_4s_infinite_alternate_forwards]">
+                           <img src="images/plan-3.png" alt="">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="absolute xl:bottom-[12%] xl:right-[13%] max-xl:bottom-[3%] max-xl:right-[5%] z-[2] animate-[tptranslateY_4s_infinite_alternate_forwards]">
+                           <img src="images/plan-4.png" alt="">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="absolute xl:bottom-[33%] xl:left-[15%] max-xl:left-[12%] max-xl:bottom-[27%] z-[2]">
+                           <img src="images/plan-5.png" class="rounded-[10px] shadow-[0_20px_50px_rgba(32,33,36,0.14)] animate-[tptranslateX2_4s_infinite_alternate_forwards]" alt="">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="absolute xl:bottom-[25%] left-[20%] max-xl:bottom-[20%] z-[2]">
+                           <img src="images/plan-6.png" class="rounded-[10px] shadow-[0_-30px_50px_rgba(29,12,7,0.1)]" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 lg:col-span-5 wow fadeInRight" data-wow-duration=".9s" data-wow-delay=".5s">
+                        <div>
+                           <div class="tp-plan-section-icon pb-[30px]">
+                              <img src="images/cta-title-icon-1.png" alt="">
+                           </div>
+                           <span class="font-medium text-[14px] tracking-[0.12em] uppercase text-black pb-[15px] inline-block">What we Offer</span>
+                           <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-black tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px]  max-md:text-[35px] pb-[22px]">
+                              <span class="font-bold">Enterprise</span><br class="max-lg:hidden">
+                              Resource Planning.
+                           </h3>
+                           <p class="font-normal text-[17px] leading-[26px]  pb-[45px]">Simple and intuitive time tracking. Run the tracker or <br class="max-lg:hidden">
+                              enter your times manually.
+                           </p>
+                           <div class="tp-plan-feature">
+                              <ul class="list-none p-0 m-0">
+                                 <li class="relative pl-[35px] mb-[15px] font-normal text-[17px] text-[#595B62]">
+                                    <i class="absolute top-0 left-0 h-[22px] w-[22px] rounded-full bg-[rgba(20,17,37,0.08)] text-center !leading-[22px] text-[10px] text-black far fa-check"></i>
+                                    Billable
+                                 </li>
+                                 <li class="relative pl-[35px] mb-[15px] font-normal text-[17px] text-[#595B62]">
+                                    <i class="absolute top-0 left-0 h-[22px] w-[22px] rounded-full bg-[rgba(20,17,37,0.08)] text-center !leading-[22px] text-[10px] text-black far fa-check"></i>
+                                    Manual time entries
+                                 </li>
+                                 <li class="relative pl-[35px] mb-[15px] font-normal text-[17px] text-[#595B62]">
+                                    <i class="absolute top-0 left-0 h-[22px] w-[22px] rounded-full bg-[rgba(20,17,37,0.08)] text-center !leading-[22px] text-[10px] text-black far fa-check"></i>
+                                    Services
+                                 </li>
+                              </ul>
+                           </div>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-cta-area-end -->
+
+            <!-- tp-plan-area-start -->
+            <div class="pb-[120px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-[30px] items-center">
+                     <div class="col-span-12 lg:col-span-5 wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <div>
+                           <div class="pb-[30px]">
+                              <img src="images/cta-title-icon-2.png" alt="">
+                           </div>
+                           <span class="font-medium text-[14px] tracking-[0.12em] uppercase text-black pb-[15px] inline-block">INVOICES</span>
+                           <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-black tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px] max-md:text-[35px] pb-[33px]">
+                              Simple
+                              <span class="font-bold">Tools</span>, Powerful Effects
+                           </h3>
+                        </div> 
+                        <div>
+                           <div class="group rounded-2xl mb-[15px] bg-[#F7F9FB] px-9 py-[27px] transition-all duration-400 accordion-item [&.active]:shadow-[0px_20px_20px_rgba(3,4,28,0.08)]">
+                              <button class="accordion-btn cursor-pointer text-black w-full text-left font-medium text-[22px] leading-[20px] relative flex items-center justify-between" data-accordion-btn="">
+                                 Dashboard
+                                 <span class="group-[.active]:border-black flex-none group-[.active]:[&::before]:opacity-0 relative w-[26px] h-[26px] border border-[#C0C2C8] rounded-full transition-all after:content-[''] after:absolute after:w-[12px] after:h-[2px] after:bg-[#525258] after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded before:content-[''] before:absolute before:w-[2px] before:h-[12px] before:bg-[#525258] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all"></span>
+                              </button>
+                              <div class="accordion-content transition-all duration-400 pr-[35px] text-[16px] leading-[28px] max-h-0 opacity-0 origin-top ease-in-out group-[.active]:max-h-[500px] group-[.active]:opacity-100 group-[.active]:translate-y-[-5px] group-[.active]:pt-[27px]">
+                                 ERP provides a complete leave management system for your HR. Upcoming holidays and remaining leave balances.
+                              </div>
+                           </div>
+                           <div class="group active rounded-2xl bg-[#F7F9FB] px-9 py-[27px] transition-all duration-400 accordion-item [&.active]:shadow-[0px_20px_20px_rgba(3,4,28,0.08)]">
+                              <button class="accordion-btn cursor-pointer text-black w-full text-left font-medium text-[22px] leading-[20px] relative flex items-center justify-between" data-accordion-btn="">
+                                 Task Management
+                                 <span class="group-[.active]:border-black flex-none group-[.active]:[&::before]:opacity-0 relative w-[26px] h-[26px] border border-[#C0C2C8] rounded-full transition-all after:content-[''] after:absolute after:w-[12px] after:h-[2px] after:bg-[#525258] after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded before:content-[''] before:absolute before:w-[2px] before:h-[12px] before:bg-[#525258] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all"></span>
+                              </button>
+                              <div class="accordion-content transition-all duration-400 pr-[35px] text-[16px] leading-[28px] max-h-0 opacity-0 origin-top ease-in-out group-[.active]:max-h-[500px] group-[.active]:opacity-100 group-[.active]:translate-y-[-5px] group-[.active]:pt-[27px]">
+                                 ERP provides a complete leave management system for your HR. Upcoming holidays and remaining leave balances.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 lg:col-span-7 wow fadeInRight" data-wow-duration=".9s" data-wow-delay=".5s">
+                        <div class="xl:ml-[95px] lg:ml-[10px] max-lg:ml-0 relative">
+                           <!-- Image 1 -->
+                           <div>
+                              <img src="images/plan-1-1.png" class="rounded-[30px] w-full" alt="">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="hidden sm:block absolute top-[26%] left-[29%] z-[2]">
+                              <img src="images/plan-1-2.png" class="rounded-[10px] shadow-[0_20px_50px_rgba(32,33,36,0.14)]" alt="">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="absolute top-[13%] lg:right-[11%] max-lg:right-[19%] animate-[tptranslateY_4s_forwards_infinite_alternate]">
+                              <img src="images/plan-1-3.png" class="rounded-[10px] shadow-[0_20px_50px_rgba(32,33,36,0.14)]" alt="">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="absolute md:bottom-[23%] left-[12%] max-md:bottom-[8%] animate-[tptranslateY_4s_forwards_infinite_alternate]">
+                              <img src="images/plan-1-4.png" class="rounded-[10px] shadow-[0_20px_50px_rgba(32,33,36,0.14)]" alt="">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="hidden sm:block absolute bottom-[18%] right-[10%] animate-[tptranslateX2_4s_forwards_infinite_alternate]">
+                              <img src="images/plan-1-5.png" alt="">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="hidden sm:block absolute top-[18%] left-[18%]">
+                              <img src="images/plan-1-6.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-plan-area-end -->
+
+            <!-- Project Section start-->
+            <div class="pt-[130px] pb-[130px]" data-background="assets/img/testimonial/testi-bg-5-1.jpg">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-[30px] items-end mb-[50px]">
+                     <div class="col-span-12 md:col-span-8">
+                        <div class="tp-testimonial-five-section-box mb-[30px] wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".3s">
+                           <span class="font-medium text-[14px] tracking-[0.12em] uppercase text-white pb-[15px] inline-block">CLIENTS & PROJECTS</span>
+                           <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-white tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px] max-md:text-[35px]">
+                              About Customer
+                              <span class="font-bold">Stories</span><br class="max-lg:hidden">
+                           </h3>
+                        </div>  
+                     </div>
+                     <div class="col-span-12 md:col-span-4">
+                        <div class="relative z-[3] flex gap-[10px] items-center content-start md:justify-end mb-[30px] wow fadeInRight" data-wow-duration=".9s" data-wow-delay=".3s">
+                           <button class="test-next group relative cursor-pointer h-[60px] w-[60px] max-sm:h-[50px] max-sm:w-[50px] rounded-full border-[2px] border-white text-white leading-[68px] max-sm:leading-[55px] transition-all duration-[400ms] overflow-hidden hover:text-black hover:border-white after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:bg-white after:scale-[0.3] after:opacity-0 after:invisible after:-z-[1] after:transition-all after:duration-[300ms] hover:after:scale-[1.1] hover:after:opacity-100 hover:after:visible">
+                              <i class="fal fa-angle-left text-[30px]"></i>
+                           </button>
+                           <button class="test-prev group relative cursor-pointer h-[60px] w-[60px] max-sm:h-[50px] max-sm:w-[50px] rounded-full border-[2px] border-white text-white leading-[68px] max-sm:leading-[55px] transition-all duration-[400ms] overflow-hidden hover:text-black hover:border-white after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:bg-white after:scale-[0.3] after:opacity-0 after:invisible after:-z-[1] after:transition-all after:duration-[300ms] hover:after:scale-[1.1] hover:after:opacity-100 hover:after:visible">
+                              <i class="fal fa-angle-right text-[30px]"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="testimonial-five-slider-active 3xl:-mx-[420px] max-2xl:-mx-[500px] max-md:mx-0 mb-[60px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="bg-white rounded-[16px] overflow-hidden">
+                           <!-- top wrapper -->
+                           <div class="flex justify-between items-center bg-[#F7F9FB] rounded-[16px] xxl:py-[30px] xxl:pr-[70px] xxl:pl-[60px] xl:p-[30px] max-xl:p-[25px]">
+                              <div class="flex items-center">
+                                 <div class="mr-[20px]">
+                                    <img src="images/testi-icon-5-4.png" alt="" class="w-[80px] flex-[0_0_auto] h-[80px] rounded-full">
+                                 </div>
+                                 <div>
+                                    <h4 class="font-bold text-[24px] leading-[20px] mb-[8px]">Joann J.</h4>
+                                    <span class="block font-normal md:text-[16px] leading-[20px] text-[#5F6168] max-md:text-[14px]">
+                                       Community Organiser
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="hidden sm:block">
+                                 <img src="images/testi-logo-5-2.png" alt="">
+                              </div>
+                           </div>
+                           <!-- content -->
+                           <div class="xxl:pt-[40px] xxl:pb-[50px] xxl:pr-[60px] xxl:pl-[60px] max-xxl:pt-[40px] max-xxl:pb-[50px] max-xxl:pr-[40px] max-xxl:pl-[40px] max-md:p-[25px]">
+                              <p class="font-normal 3xl:text-[20px] 3xl:leading-[32px] text-[#5F6168] 3xl:pr-[30px] max-3xl:pr-0 2xl:text-[18px] 2xl:leading-[29px] xl:text-[17px] xl:leading-[29px] lg:text-[18px] lg:leading-[30px] md:text-[16px] md:leading-[27px] max-md:text-[16px] max-md:leading-[26px]">
+                                 “ This is really awesome. many small businessmen are suffering from this service in different platform and the lovers are always looking this kind of feature on their own website. ”
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="bg-white rounded-[16px] overflow-hidden">
+                           <!-- top wrapper -->
+                           <div class="flex justify-between items-center bg-[#F7F9FB] rounded-[16px] xxl:py-[30px] xxl:pr-[70px] xxl:pl-[60px] xl:p-[30px] max-xl:p-[25px]">
+                              <div class="flex items-center">
+                                 <div class="mr-[20px]">
+                                    <img src="images/testi-icon-5-2.png" alt="" class="w-[80px] flex-[0_0_auto] h-[80px] rounded-full">
+                                 </div>
+                                 <div>
+                                    <h4 class="font-bold text-[24px] leading-[20px] mb-[8px]">Steven G.</h4>
+                                    <span class="block font-normal md:text-[16px] leading-[20px] text-[#5F6168] max-md:text-[14px]">
+                                       Community Organiser
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="hidden sm:block">
+                                 <img src="images/testi-logo-5-1.png" alt="">
+                              </div>
+                           </div>
+                           <!-- content -->
+                           <div class="xxl:pt-[40px] xxl:pb-[50px] xxl:pr-[60px] xxl:pl-[60px] max-xxl:pt-[40px] max-xxl:pb-[50px] max-xxl:pr-[40px] max-xxl:pl-[40px] max-md:p-[25px]">
+                              <p class="font-normal 3xl:text-[20px] 3xl:leading-[32px] text-[#5F6168] 3xl:pr-[30px] max-3xl:pr-0 2xl:text-[18px] 2xl:leading-[29px] xl:text-[17px] xl:leading-[29px] lg:text-[18px] lg:leading-[30px] md:text-[16px] md:leading-[27px] max-md:text-[16px] max-md:leading-[26px]">
+                                 “ This is really awesome. many small businessmen are suffering from this service in different platform and the lovers are always looking this kind of feature on their own website. ”
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="bg-white rounded-[16px] overflow-hidden">
+                           <!-- top wrapper -->
+                           <div class="flex justify-between items-center bg-[#F7F9FB] rounded-[16px] xxl:py-[30px] xxl:pr-[70px] xxl:pl-[60px] xl:p-[30px] max-xl:p-[25px]">
+                              <div class="flex items-center">
+                                 <div class="mr-[20px]">
+                                    <img src="images/testi-icon-5-3.png" alt="" class="w-[80px] flex-[0_0_auto] h-[80px] rounded-full">
+                                 </div>
+                                 <div>
+                                    <h4 class="font-bold text-[24px] leading-[20px] mb-[8px]">Gary M. Adams</h4>
+                                    <span class="block font-normal md:text-[16px] leading-[20px] text-[#5F6168] max-md:text-[14px]">
+                                       Community Organiser
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="hidden sm:block">
+                                 <img src="images/testi-logo-5-3.png" alt="">
+                              </div>
+                           </div>
+                           <!-- content -->
+                           <div class="xxl:pt-[40px] xxl:pb-[50px] xxl:pr-[60px] xxl:pl-[60px] max-xxl:pt-[40px] max-xxl:pb-[50px] max-xxl:pr-[40px] max-xxl:pl-[40px] max-md:p-[25px]">
+                              <p class="font-normal 3xl:text-[20px] 3xl:leading-[32px] text-[#5F6168] 3xl:pr-[30px] max-3xl:pr-0 2xl:text-[18px] 2xl:leading-[29px] xl:text-[17px] xl:leading-[29px] lg:text-[18px] lg:leading-[30px] md:text-[16px] md:leading-[27px] max-md:text-[16px] max-md:leading-[26px]">
+                                 “ This is really awesome. many small businessmen are suffering from this service in different platform and the lovers are always looking this kind of feature on their own website. ”
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="bg-white rounded-[16px] overflow-hidden">
+                           <!-- top wrapper -->
+                           <div class="flex justify-between items-center bg-[#F7F9FB] rounded-[16px] xxl:py-[30px] xxl:pr-[70px] xxl:pl-[60px] xl:p-[30px] max-xl:p-[25px]">
+                              <div class="flex items-center">
+                                 <div class="mr-[20px]">
+                                    <img src="images/testi-icon-5-4.png" alt="" class="w-[80px] flex-[0_0_auto] h-[80px] rounded-full">
+                                 </div>
+                                 <div>
+                                    <h4 class="font-bold text-[24px] leading-[20px] mb-[8px]">Edward G. Hall</h4>
+                                    <span class="block font-normal md:text-[16px] leading-[20px] text-[#5F6168] max-md:text-[14px]">
+                                       Community Organiser
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="hidden sm:block">
+                                 <img src="images/testi-logo-5-3.png" alt="">
+                              </div>
+                           </div>
+                           <!-- content -->
+                           <div class="xxl:pt-[40px] xxl:pb-[50px] xxl:pr-[60px] xxl:pl-[60px] max-xxl:pt-[40px] max-xxl:pb-[50px] max-xxl:pr-[40px] max-xxl:pl-[40px] max-md:p-[25px]">
+                              <p class="font-normal 3xl:text-[20px] 3xl:leading-[32px] text-[#5F6168] 3xl:pr-[30px] max-3xl:pr-0 2xl:text-[18px] 2xl:leading-[29px] xl:text-[17px] xl:leading-[29px] lg:text-[18px] lg:leading-[30px] md:text-[16px] md:leading-[27px] max-md:text-[16px] max-md:leading-[26px]">
+                                 “ This is really awesome. many small businessmen are suffering from this service in different platform and the lovers are always looking this kind of feature on their own website. ”
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="bg-white rounded-[16px] overflow-hidden">
+                           <!-- top wrapper -->
+                           <div class="flex justify-between items-center bg-[#F7F9FB] rounded-[16px] xxl:py-[30px] xxl:pr-[70px] xxl:pl-[60px] xl:p-[30px] max-xl:p-[25px]">
+                              <div class="flex items-center">
+                                 <div class="mr-[20px]">
+                                    <img src="images/testi-icon-5-1.png" alt="" class="w-[80px] flex-[0_0_auto] h-[80px] rounded-full">
+                                 </div>
+                                 <div>
+                                    <h4 class="font-bold text-[24px] leading-[20px] mb-[8px]">Erma P. Brown</h4>
+                                    <span class="block font-normal md:text-[16px] leading-[20px] text-[#5F6168] max-md:text-[14px]">
+                                       Community Organiser
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="hidden sm:block">
+                                 <img src="images/testi-logo-5-2.png" alt="">
+                              </div>
+                           </div>
+                           <!-- content -->
+                           <div class="xxl:pt-[40px] xxl:pb-[50px] xxl:pr-[60px] xxl:pl-[60px] max-xxl:pt-[40px] max-xxl:pb-[50px] max-xxl:pr-[40px] max-xxl:pl-[40px] max-md:p-[25px]">
+                              <p class="font-normal 3xl:text-[20px] 3xl:leading-[32px] text-[#5F6168] 3xl:pr-[30px] max-3xl:pr-0 2xl:text-[18px] 2xl:leading-[29px] xl:text-[17px] xl:leading-[29px] lg:text-[18px] lg:leading-[30px] md:text-[16px] md:leading-[27px] max-md:text-[16px] max-md:leading-[26px]">
+                                 “ This is really awesome. many small businessmen are suffering from this service in different platform and the lovers are always looking this kind of feature on their own website. ”
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tp-scrollbar bg-[rgba(255,255,255,_0.2)] h-[2px] w-1/2 relative left-0 right-0 mx-auto text-center [&_.swiper-scrollbar-drag]:bg-white!"></div>
+            </div>
+            <!-- Project Section end-->
+
+            <!-- tp-feature-area-start -->
+            <div class="bg-gray-800 pt-[120px] pb-[110px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-[30px]">
+                     <div class="col-span-12">
+                        <div class="text-center mb-[50px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                           <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-black tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px]  max-md:text-[35px] pb-[8px]">
+                              About Customer
+                              <span class="font-bold">Stories</span><br class="max-lg:hidden">
+                           </h3>
+                           <p class="font-normal text-[17px] leading-[26px]">Take your business to the next level with <span class="font-semibold text-[17px] leading-[26px] text-[#141125]">09</span> accessible
+                              premium  extensions <br class="max-md:hidden"> & different features</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid grid-cols-12 tp-feature-five-wrapper-main">
+                     <div class="col-span-12 xl:col-span-3 lg:col-span-6 md:col-span-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <div class="transition-all duration-300 hover:shadow-[0_30px_60px_rgba(32,33,36,0.2)] hover:rounded-[16px] hover:relative group hover:z-[9]">
+                           <div class="bg-white overflow-hidden transition-all duration-300 shadow-[0_1px_2px_rgba(32,33,36,0.1)] rounded-[16px_0_0_16px] p-10 text-center relative z-[1] hover:scale-[1.1] hover:rounded-[16px] hover:shadow-none">
+                              <!-- icon -->
+                              <div class="relative z-10 inline-block w-[85px] h-[85px] leading-[85px] text-center rounded-full mb-10">
+                                 <img src="images/fea-icon-5-1.png" alt="">
+                                 <div class="absolute top-0 left-0 w-full h-full bg-[#FF7A59] rounded-full transition-all duration-300 -z-[1] group-hover:scale-[3.7] group-hover:-top-[125%]"></div>
+                              </div>
+                              <!-- content -->
+                              <div>
+                                 <h4 class="font-semibold text-[20px] leading-[26px] text-[#141125] pb-[13px]"> Hubspot <br class="max-sm:hidden"> Contacts Sync</h4>
+                                 <p class="font-normal text-[15px] leading-[24px] text-[#5F6168] pb-[30px]">
+                                    Transfer contacts information <br class="max-md:hidden">
+                                    between MailChimp
+                                 </p>
+                              </div>
+                              <!-- button -->
+                              <div>
+                                 <a href="service-details.html" class="inline-block relative z-[1] h-[40px] leading-[38px] px-[35px] rounded-[30px] bg-[#F7F9FB] text-[14px] font-semibold text-black transition-all duration-300 hover:bg-[#6B14FA] hover:text-white">
+                                    Learn More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 xl:col-span-3 lg:col-span-6 md:col-span-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        <div class="transition-all duration-300 hover:shadow-[0_30px_60px_rgba(32,33,36,0.2)] hover:rounded-[16px] hover:relative group hover:z-[9]">
+                           <div class="bg-white overflow-hidden transition-all duration-300 shadow-[0_1px_2px_rgba(32,33,36,0.1)] p-10 text-center relative z-[1] hover:scale-[1.1] hover:rounded-[16px] hover:shadow-none">
+                              <!-- icon -->
+                              <div class="relative z-10 inline-block w-[85px] h-[85px] leading-[85px] text-center rounded-full mb-10">
+                                 <img src="images/fea-icon-5-2.png" alt="">
+                                 <div class="absolute top-0 left-0 w-full h-full bg-[#FFE01B] rounded-full transition-all duration-300 -z-[1] group-hover:scale-[3.7] group-hover:-top-[125%]"></div>
+                              </div>
+                              <!-- content -->
+                              <div>
+                                 <h4 class="font-semibold text-[20px] leading-[26px] text-[#141125] pb-[13px]"> Mailchimp<br class="max-sm:hidden"> Contacts Sync</h4>
+                                 <p class="font-normal text-[15px] leading-[24px] text-[#5F6168] pb-[30px]">
+                                    Transfer contacts information <br class="max-md:hidden">
+                                    between MailChimp
+                                 </p>
+                              </div>
+                              <!-- button -->
+                              <div>
+                                 <a href="service-details.html" class="inline-block relative z-[1] h-[40px] leading-[38px] px-[35px] rounded-[30px] bg-[#F7F9FB] text-[14px] font-semibold text-black transition-all duration-300 hover:bg-[#6B14FA] hover:text-white">
+                                    Learn More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 xl:col-span-3 lg:col-span-6 md:col-span-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div class="transition-all duration-300 hover:shadow-[0_30px_60px_rgba(32,33,36,0.2)] hover:rounded-[16px] hover:relative group hover:z-[9]">
+                           <div class="bg-white overflow-hidden transition-all duration-300 shadow-[0_1px_2px_rgba(32,33,36,0.1)] p-10 text-center relative z-[1] hover:scale-[1.1] hover:rounded-[16px] hover:shadow-none">
+                              <!-- icon -->
+                              <div class="relative z-10 inline-block w-[85px] h-[85px] leading-[85px] text-center rounded-full mb-10">
+                                 <img src="images/fea-icon-5-3.png" alt="">
+                                 <div class="absolute top-0 left-0 w-full h-full bg-[#AAE0F4] rounded-full transition-all duration-300 -z-[1] group-hover:scale-[3.7] group-hover:-top-[125%]"></div>
+                              </div>
+                              <!-- content -->
+                              <div>
+                                 <h4 class="font-semibold text-[20px] leading-[26px] text-[#141125] pb-[13px]"> Salesforce <br class="max-sm:hidden"> Contacts Sync</h4>
+                                 <p class="font-normal text-[15px] leading-[24px] text-[#5F6168] pb-[30px]">
+                                    Transfer contacts information <br class="max-md:hidden">
+                                    between MailChimp
+                                 </p>
+                              </div>
+                              <!-- button -->
+                              <div>
+                                 <a href="service-details.html" class="inline-block relative z-[1] h-[40px] leading-[38px] px-[35px] rounded-[30px] bg-[#F7F9FB] text-[14px] font-semibold text-black transition-all duration-300 hover:bg-[#6B14FA] hover:text-white">
+                                    Learn More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 xl:col-span-3 lg:col-span-6 md:col-span-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".9s">
+                        <div class="transition-all duration-300 hover:shadow-[0_30px_60px_rgba(32,33,36,0.2)] hover:rounded-[16px] hover:relative group hover:z-[9]">
+                           <div class="bg-white overflow-hidden transition-all duration-300 shadow-[0_1px_2px_rgba(32,33,36,0.1)] rounded-[0_16px_16px_0] p-10 text-center relative z-[1] hover:scale-[1.1] hover:rounded-[16px] hover:shadow-none">
+                              <!-- icon -->
+                              <div class="relative z-10 inline-block w-[85px] h-[85px] leading-[85px] text-center rounded-full mb-10">
+                                 <img src="images/fea-icon-5-4.png" alt="">
+                                 <div class="absolute top-0 left-0 w-full h-full bg-[#03363D] rounded-full transition-all duration-300 -z-[1] group-hover:scale-[3.7] group-hover:-top-[125%]"></div>
+                              </div>
+                              <!-- content -->
+                              <div>
+                                 <h4 class="font-semibold text-[20px] leading-[26px] text-[#141125] pb-[13px]"> Zendesk <br class="max-sm:hidden"> Integration</h4>
+                                 <p class="font-normal text-[15px] leading-[24px] text-[#5F6168] pb-[30px]">
+                                    Transfer contacts information <br class="max-md:hidden">
+                                    between MailChimp
+                                 </p>
+                              </div>
+                              <!-- button -->
+                              <div>
+                                 <a href="service-details.html" class="inline-block relative z-[1] h-[40px] leading-[38px] px-[35px] rounded-[30px] bg-[#F7F9FB] text-[14px] font-semibold text-black transition-all duration-300 hover:bg-[#6B14FA] hover:text-white">
+                                    Learn More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-span-12 mt-[70px] wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">
+                        <div class="text-center">
+                           <span class="font-normal text-[22px] leading-[24px] text-black max-sm:text-[20px] max-md:leading-[24px]">Check out all of our <a href="service-details.html" class="font-semibold text-[22px] leading-[24px] text-[#6B14FA] underline max-md:text-[20px] max-md:leading-[24px]">All features</a></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-feature-area-end -->
+
+            <!-- tp-integration-area-start -->
+            <div class="relative overflow-hidden pt-[160px] pb-[240px] max-md:pt-[120px] max-md:pb-[120px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="relative text-center">
+                     <!-- content -->
+                     <div class="relative z-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-black tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px] max-md:text-[35px] pb-[18px]">
+                           <span class="font-bold">Featured</span><br class="max-lg:hidden">
+                           In all Over the World
+                        </h3>
+                        <p class="font-normal text-[17px] leading-[26px] pb-[45px]">WP ERP has been already featured in many resourceful and<br> popular media all over the world.</p>
+                        <a href="service-details.html" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-white bg-blue-4 rounded-[100px] shadow-[inset_-2px_-2px_2px_rgba(7,13,29,0.3)] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent">
+                           <span class="relative z-[5] transition-[0.5s]">Explore All</span>
+                        </a>
+                     </div>
+                     <!-- circle images -->
+                     <div class="absolute top-[0%] left-[0%] hidden lg:block">
+                        <img src="images/fea-circle-5-1.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[66%] left-[-8%] hidden md:block">
+                        <img src="images/fea-circle-5-2.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[78%] left-[5%] hidden lg:block">
+                        <img src="images/fea-circle-5-3.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[123%] left-[-7%] hidden md:block">
+                        <img src="images/fea-circle-5-4.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[103%] left-[18%] hidden md:block">
+                        <img src="images/fea-circle-5-5.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[103%] right-[18%] hidden lg:block">
+                        <img src="images/fea-circle-5-6.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[-3%] right-[7%] hidden lg:block">
+                        <img src="images/fea-circle-5-7.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[38%] right-[6%] hidden lg:block">
+                        <img src="images/fea-circle-5-8.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute top-[35%] right-[-13%] 2xl:top-[41%] 2xl:right-[-9%] xl:top-[70%] xl:right-0 hidden md:block">
+                        <img src="images/fea-circle-5-9.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute bottom-[-43%] right-[-4%] hidden md:block">
+                        <img src="images/fea-circle-5-10.png" class="rounded-full shadow-[20px_30px_100px_rgba(5,12,31,0.1)]" alt="">
+                     </div>
+                     <div class="absolute bottom-[-34%] left-[3%] -z-[1] animate-[moving_9s_linear_infinite]">
+                        <img src="images/fea-circle-5-11.png" alt="">
+                     </div>
+                     <div class="absolute bottom-[49%] left-[7%] -z-[1] animate-[movingleftright1_18s_linear_infinite]">
+                        <img src="images/fea-circle-5-12.png" alt="">
+                     </div>
+                     <div class="absolute bottom-[-42%] right-[14%] animate-[moving_9s_linear_infinite]">
+                        <img src="images/fea-circle-5-13.png" alt="">
+                     </div>
+                     <div class="absolute bottom-[21%] right-[-11%] 2xl:bottom-[13%] 2xl:right-[-6%] -z-[1] animate-[movingleftright1_18s_linear_infinite]">
+                        <img src="images/fea-circle-5-14.png" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-integration-area-end -->
+
+            <!-- tp-cta-area-start -->
+            <div class="mx-auto max-w-[1275px] px-[15px]">
+               <div class="relative bg-no-repeat bg-cover pt-[120px] pb-[120px] mb-[120px] rounded-[25px]" data-background="assets/img/cta/cta-bg-5-1.png">
+                  <!-- shape 1 -->
+                  <div class="absolute xl:right-[17%] bottom-[-6%] max-xl:right-[9%] hidden md:block">
+                     <img src="images/cta-shape-5-1.png" class="w-[140px]" alt="">
+                  </div>
+                  <!-- shape 2 -->
+                  <div class="absolute xl:left-[-5%] bottom-[-7%] max-xl:left-[-2%] hidden md:block">
+                     <img src="images/cta-shape-5-2.png" alt="">
+                  </div>
+                  <div class="text-center">
+                     <span class="inline-block pb-[15px] text-[14px] font-medium uppercase tracking-[0.12em] text-white">All-in-one Business Manager</span>
+                     <h3 class="font-extralight xl:text-[50px] leading-[1.2] text-white tracking-[-0.03em] lg:text-[42px] max-lg:text-[50px] max-md:text-[35px] pb-[38px]">
+                         Supercharge Your Growing <br class="max-lg:hidden">
+                        <span class="font-bold">Business</span>
+                     </h3>
+                     <a href="contact.html" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-black bg-[#FFCE5A] rounded-[100px]  overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-white after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent">
+                        <span class="relative z-[5] transition-[0.5s]">Get Started Free</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-cta-area-end -->
+
+         </main>
+
+         <footer>
+            <div class="border-b border-[#DFDFEA] pb-14">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-x-[30px]">
+                     <!-- Column 1 -->
+                     <div class="lg:col-span-3 md:col-span-6 col-span-12 pb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        <div class="mb-[25px]">
+                           <a href="index.html">
+                              <img src="images/logo-black.png" alt="">
+                           </a>
+                        </div>
+                        <div>
+                           <p class="font-normal text-[16px] leading-6 font-urban inline-block pb-[20px] ">Build a modern and creative website with crealand</p>
+                           <ul>
+                              <li class="leading-5 font-dm mb-[15px] text-[20px] text-gray-100 font-medium flex items-center hover:text-primary transition-all duration-300">
+                                 <span class="mr-[10px]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M13.2906 0.249174C12.878 0.211673 12.5132 0.51568 12.4757 0.928192C12.4382 1.3407 12.7422 1.70551 13.1548 1.74301L13.2906 0.249174ZM22.2533 10.8416C22.2908 11.2541 22.6556 11.5581 23.0681 11.5206C23.4806 11.4831 23.7846 11.1183 23.7471 10.7058L22.2533 10.8416ZM13.2227 0.996094C13.1548 1.74301 13.1543 1.74298 13.1539 1.74294C13.1538 1.74293 13.1534 1.74289 13.1532 1.74287C13.1527 1.74283 13.1523 1.74279 13.1519 1.74275C13.1511 1.74267 13.1505 1.74261 13.15 1.74256C13.149 1.74247 13.1487 1.74243 13.1491 1.74247C13.1497 1.74254 13.1529 1.74289 13.1585 1.74361C13.1698 1.74506 13.191 1.74798 13.2216 1.75308C13.2827 1.76327 13.3816 1.78217 13.5144 1.81537C13.7798 1.88173 14.1816 2.0054 14.6902 2.23144C15.7057 2.68274 17.157 3.54668 18.8033 5.19301L19.864 4.13235C18.0881 2.35653 16.484 1.38718 15.2994 0.860723C14.7081 0.597886 14.2238 0.446563 13.8782 0.360151C13.7054 0.316962 13.5674 0.290028 13.4682 0.273485C13.4186 0.265215 13.3786 0.259543 13.3488 0.255735C13.334 0.253832 13.3216 0.252394 13.3119 0.251331C13.307 0.2508 13.3028 0.250362 13.2992 0.250006C13.2975 0.249828 13.2959 0.249671 13.2944 0.249533C13.2937 0.249464 13.293 0.249399 13.2924 0.249339C13.292 0.24931 13.2916 0.249268 13.2914 0.249253C13.291 0.249213 13.2906 0.249174 13.2227 0.996094ZM18.8033 5.19301C20.4496 6.83934 21.3136 8.29066 21.7649 9.30608C21.9909 9.81467 22.1146 10.2165 22.181 10.482C22.2141 10.6148 22.233 10.7136 22.2432 10.7747C22.2483 10.8053 22.2513 10.8265 22.2527 10.8378C22.2534 10.8434 22.2538 10.8466 22.2538 10.8473C22.2539 10.8476 22.2538 10.8473 22.2538 10.8463C22.2537 10.8459 22.2536 10.8452 22.2536 10.8444C22.2535 10.844 22.2535 10.8436 22.2534 10.8431C22.2534 10.8429 22.2534 10.8425 22.2534 10.8424C22.2533 10.842 22.2533 10.8416 23.0002 10.7737C23.7471 10.7058 23.7471 10.7053 23.7471 10.7049C23.747 10.7047 23.747 10.7043 23.747 10.704C23.7469 10.7033 23.7469 10.7026 23.7468 10.7019C23.7466 10.7005 23.7465 10.6988 23.7463 10.6971C23.746 10.6935 23.7455 10.6893 23.745 10.6844C23.7439 10.6747 23.7425 10.6624 23.7406 10.6475C23.7368 10.6177 23.7311 10.5778 23.7228 10.5281C23.7063 10.4289 23.6794 10.2909 23.6362 10.1182C23.5498 9.77251 23.3984 9.28826 23.1356 8.69687C22.6091 7.51234 21.6398 5.90817 19.864 4.13235L18.8033 5.19301Z" fill="#595B62"></path>
+                                       <path d="M13.6816 4.59526C13.2834 4.48147 12.8682 4.71209 12.7544 5.11037C12.6406 5.50864 12.8713 5.92376 13.2695 6.03755L13.6816 4.59526ZM17.9398 10.7078C18.0536 11.1061 18.4687 11.3367 18.867 11.2229C19.2652 11.1091 19.4959 10.694 19.3821 10.2957L17.9398 10.7078ZM13.4756 5.31641C13.2695 6.03755 13.2692 6.03745 13.2689 6.03735C13.2688 6.03732 13.2684 6.03723 13.2682 6.03716C13.2678 6.03704 13.2674 6.03692 13.267 6.03681C13.2662 6.03658 13.2655 6.03638 13.2648 6.03619C13.2636 6.03581 13.2626 6.03552 13.2619 6.03531C13.2605 6.03489 13.2603 6.03481 13.2612 6.03511C13.2631 6.03569 13.2695 6.03778 13.2803 6.04163C13.302 6.04932 13.3415 6.0641 13.3976 6.08814C13.5097 6.13618 13.6887 6.22145 13.9254 6.36154C14.3984 6.64147 15.1051 7.14237 15.97 8.00729L17.0307 6.94663C16.0808 5.99669 15.2751 5.41731 14.6894 5.07068C14.3968 4.89749 14.1599 4.7829 13.9884 4.70942C13.9027 4.67269 13.8335 4.64628 13.7819 4.62798C13.7561 4.61884 13.7348 4.61172 13.718 4.60636C13.7096 4.60368 13.7024 4.60143 13.6963 4.5996C13.6933 4.59868 13.6905 4.59786 13.6881 4.59714C13.6869 4.59678 13.6857 4.59644 13.6846 4.59613C13.6841 4.59597 13.6836 4.59582 13.6831 4.59568C13.6828 4.59561 13.6825 4.5955 13.6823 4.59547C13.682 4.59536 13.6816 4.59526 13.4756 5.31641ZM15.97 8.00729C16.835 8.87222 17.3359 9.57894 17.6158 10.0519C17.7559 10.2886 17.8411 10.4677 17.8892 10.5798C17.9132 10.6359 17.928 10.6753 17.9357 10.697C17.9396 10.7079 17.9416 10.7143 17.9422 10.7161C17.9425 10.717 17.9424 10.7168 17.942 10.7154C17.9418 10.7147 17.9415 10.7138 17.9411 10.7125C17.941 10.7118 17.9407 10.7111 17.9405 10.7104C17.9404 10.71 17.9403 10.7096 17.9402 10.7091C17.9401 10.7089 17.94 10.7086 17.94 10.7085C17.9399 10.7081 17.9398 10.7078 18.6609 10.5017C19.3821 10.2957 19.382 10.2953 19.3819 10.295C19.3818 10.2949 19.3817 10.2945 19.3816 10.2943C19.3815 10.2937 19.3814 10.2932 19.3812 10.2927C19.3809 10.2916 19.3805 10.2905 19.3802 10.2892C19.3795 10.2868 19.3787 10.284 19.3777 10.281C19.3759 10.2749 19.3737 10.2677 19.371 10.2593C19.3656 10.2425 19.3585 10.2212 19.3493 10.1954C19.331 10.1438 19.3046 10.0746 19.2679 9.9889C19.1944 9.81744 19.0798 9.58057 18.9067 9.28794C18.56 8.70224 17.9806 7.89658 17.0307 6.94663L15.97 8.00729Z" fill="#595B62"></path>
+                                       <path d="M9.17234 6.47135L8.51742 6.83685V6.83685L9.17234 6.47135ZM8.37912 5.05003L7.7242 5.41552V5.41552L8.37912 5.05003ZM1.75747 8.27682C1.77316 7.8629 1.45034 7.51464 1.03642 7.49895C0.622503 7.48326 0.274237 7.80608 0.258546 8.22L1.75747 8.27682ZM5.48265 18.5139L6.01298 17.9836L5.48265 18.5139ZM9.58533 14.4112L10.1157 13.8809L9.58533 14.4112ZM17.5252 14.8242L17.1597 15.4791L17.5252 14.8242ZM18.9465 15.6174L19.312 14.9625L18.9465 15.6174ZM15.7481 22.9885L15.7765 23.738L15.7481 22.9885ZM19.4097 21.117L19.94 21.6474L19.4097 21.117ZM2.34917 4.05656C2.05628 4.34945 2.05628 4.82432 2.34917 5.11722C2.64206 5.41011 3.11694 5.41011 3.40983 5.11722L2.34917 4.05656ZM12.2065 21.8003C11.8083 21.6861 11.393 21.9163 11.2788 22.3145C11.1646 22.7127 11.3949 23.128 11.793 23.2422L12.2065 21.8003ZM7.92664 21.4669C8.27472 21.6914 8.73891 21.5912 8.96344 21.2431C9.18796 20.895 9.08779 20.4309 8.73971 20.2063L7.92664 21.4669ZM8.47337 10.5641L9.00372 11.0944L8.47337 10.5641ZM8.47337 10.5641L9.00371 11.0944L8.47337 10.5641ZM13.4324 15.5232L12.9022 14.9927L13.4324 15.5232ZM13.4325 15.5231L13.9628 16.0535L13.4325 15.5231ZM9.82725 6.10585L9.03403 4.68453L7.7242 5.41552L8.51742 6.83685L9.82725 6.10585ZM0.258546 8.22C0.163585 10.7249 0.808273 14.9002 4.95232 19.0442L6.01298 17.9836C2.21135 14.1819 1.67561 10.4361 1.75747 8.27682L0.258546 8.22ZM10.1157 13.8809C8.97185 12.7371 8.83028 11.9694 8.84863 11.5946C8.86791 11.201 9.07325 11.0249 9.00372 11.0944L7.94302 10.0338C7.87337 10.1035 7.39499 10.6112 7.35043 11.5212C7.30494 12.4501 7.71941 13.6059 9.055 14.9415L10.1157 13.8809ZM17.1597 15.4791L18.581 16.2723L19.312 14.9625L17.8907 14.1693L17.1597 15.4791ZM9.055 14.9415C10.3902 16.2768 11.5458 16.6914 12.4746 16.6461C13.3846 16.6018 13.8925 16.1237 13.9626 16.0537L12.9022 14.9927C12.9715 14.9235 12.7953 15.1287 12.4016 15.1479C12.0267 15.1662 11.2592 15.0244 10.1157 13.8809L9.055 14.9415ZM18.8793 20.5867C17.918 21.548 16.8344 22.1968 15.7197 22.2391L15.7765 23.738C17.4326 23.6752 18.8553 22.732 19.94 21.6474L18.8793 20.5867ZM18.581 16.2723C20.0065 17.0679 20.2947 19.1714 18.8793 20.5867L19.94 21.6474C21.9296 19.6578 21.7603 16.3288 19.312 14.9625L18.581 16.2723ZM13.9628 16.0535C14.8811 15.1352 16.2031 14.9453 17.1597 15.4791L17.8907 14.1693C16.282 13.2715 14.2387 13.6562 12.9021 14.9928L13.9628 16.0535ZM9.03403 4.68453C7.6677 2.23628 4.33875 2.06698 2.34917 4.05656L3.40983 5.11722C4.82517 3.70188 6.92867 3.99006 7.7242 5.41552L9.03403 4.68453ZM9.00371 11.0944C10.3403 9.75784 10.7251 7.71459 9.82725 6.10585L8.51742 6.83685C9.05129 7.79345 8.86133 9.1155 7.94304 10.0338L9.00371 11.0944ZM15.7197 22.2391C14.7923 22.2742 13.5816 22.1945 12.2065 21.8003L11.793 23.2422C13.3423 23.6864 14.7141 23.7783 15.7765 23.738L15.7197 22.2391ZM8.73971 20.2063C7.85142 19.6334 6.93498 18.9056 6.01298 17.9836L4.95232 19.0442C5.94723 20.0391 6.94627 20.8345 7.92664 21.4669L8.73971 20.2063ZM9.00372 11.0944L9.00371 11.0944L7.94304 10.0338L7.94302 10.0338L9.00372 11.0944ZM13.9626 16.0537L13.9628 16.0535L12.9021 14.9928L12.9022 14.9927L13.9626 16.0537Z" fill="#595B62"></path>
+                                    </svg>
+                                 </span>
+                                 <a class="first-child" href="tel:+806(000)8899">+806 (000) 88 99</a>
+                              </li>
+                              <li class="font-dm leading-5 text-grey-100 text-[20px] font-medium flex items-center hover:text-primary transition-all duration-300">
+                                 <span class="mr-[10px]">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M6.6 8.99531C6.6 9.43714 6.24183 9.79531 5.8 9.79531C5.35817 9.79531 5 9.43714 5 8.99531C5 8.55348 5.35817 8.19531 5.8 8.19531C6.24183 8.19531 6.6 8.55348 6.6 8.99531Z" fill="#595B62"></path>
+                                       <path d="M9.8 8.99531C9.8 9.43714 9.44183 9.79531 9 9.79531C8.55817 9.79531 8.2 9.43714 8.2 8.99531C8.2 8.55348 8.55817 8.19531 9 8.19531C9.44183 8.19531 9.8 8.55348 9.8 8.99531Z" fill="#595B62"></path>
+                                       <path d="M13 8.99531C13 9.43714 12.6418 9.79531 12.2 9.79531C11.7582 9.79531 11.4 9.43714 11.4 8.99531C11.4 8.55348 11.7582 8.19531 12.2 8.19531C12.6418 8.19531 13 8.55348 13 8.99531Z" fill="#595B62"></path>
+                                       <path d="M13 2.06635C11.8233 1.38567 10.4571 0.996094 9 0.996094C4.58172 0.996094 1 4.57782 1 8.99609C1 10.2758 1.30049 11.4854 1.83477 12.5581C1.97675 12.8431 2.02401 13.1689 1.94169 13.4766L1.46521 15.2574C1.25836 16.0305 1.96561 16.7377 2.73868 16.5309L4.51951 16.0544C4.82715 15.9721 5.15297 16.0193 5.43802 16.1613C6.51069 16.6956 7.72025 16.9961 9 16.9961C13.4183 16.9961 17 13.4144 17 8.99609C17 7.53895 16.6104 6.17279 15.9297 4.99609" stroke="#595B62" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg> 
+                                 </span>
+                                 <a href="mailto:contact@info.com">contact@info.com</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+   
+                     <!-- Column 2 -->
+                     <div class="lg:col-span-3 md:col-span-6 col-span-12 pb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div class="ml-[75px] max-lg:ml-0">
+                           <h4 class="text-[#202124] font-urban font-semibold text-[22px] mb-8">Navigation</h4>
+                           <ul class="text-grey-100 font-medium space-y-3">
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">Damo page</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">About</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">Pricing Plan</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">Integrations</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">Blog</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban font-medium text-[16px] hover:ml-1 transition-all">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+   
+                     <!-- Column 3 -->
+                     <div class="lg:col-span-2 md:col-span-6 col-span-12 pb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div>
+                           <h4 class="text-[#202124] font-urban font-semibold text-[22px] mb-8">Other Pages</h4>
+                           <ul class="text-grey-100 font-medium space-y-3">
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">Features</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">Team</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">Careers</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">Login</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">Register</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="hover:text-black font-urban text-[16px] font-medium hover:ml-1 transition-all">404 Not found</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+   
+                     <!-- Column 4 -->
+                     <div class="lg:col-span-4 md:col-span-6 col-span-12 pb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1s">
+                        <div class="ml-[40px] max-lg:ml-0">
+                           <h4 class="text-[#202124] font-urban font-semibold text-[22px] mb-8">Our Newsletter</h4>
+                           <div>
+                              <div class="relative mb-[35px]">
+                                 <form action="#">
+                                    <input type="text" placeholder="Business email address" class="w-full bg-[#F7F9FB] text-black h-[60px] pl-14 pr-20 rounded-full border-none text-sm font-normal">
+                                    <span class="absolute top-1/2 left-6 -translate-y-1/2 leading-relaxed">
+                                       <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z" stroke="#5F6168" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path opacity="0.4" d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993" stroke="#5F6168" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </span>
+                                    <button class="absolute top-1/2 right-1 transform -translate-y-1/2 h-[50px] w-[50px] leading-[50px] rounded-full bg-[#FFCE5A] cursor-pointer flex items-center justify-center text-black transition-all duration-300 hover:shadow-[inset_0_0_0_30px_#000] hover:text-white">
+                                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-[-45deg]">
+                                          <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </button>
+                                 </form>
+                              </div>
+                              <h4 class="font-semibold text-[18px] leading-[16px] text-[#202124] pb-[18px]">Social media</h4>
+                              <div class="flex space-x-2 max-md:mb-[10px]">
+                                 <a href="#" class="inline-block text-[15px] transition-all duration-300 mr-[25px] hover:text-blue-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                 </a>
+                                 <a href="#" class="inline-block text-[15px] transition-all duration-300 mr-[25px] hover:text-blue-2">
+                                    <svg class="-translate-y-[2px]" xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28884 0.714844H0.666992L6.14691 7.9153L1.01754 13.9556H3.38746L7.26697 9.38713L10.7118 13.9136H15.3337L9.69453 6.50391L9.70451 6.51669L14.5599 0.798959H12.19L8.58427 5.04503L5.28884 0.714844ZM3.21817 1.97588H4.65702L12.7825 12.6525H11.3436L3.21817 1.97588Z" fill="currentColor"></path>
+                                    </svg>
+                                 </a>
+                                 <a href="#" class="inline-block text-[15px] transition-all duration-300 mr-[25px] hover:text-blue-2">
+                                    <i class="fab fa-linkedin-in"></i>
+                                 </a>
+                                 <a href="#" class="inline-block text-[15px] transition-all duration-300 mr-[25px] hover:text-blue-2">
+                                    <i class="fab fa-vimeo-v"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="py-[20px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid grid-cols-12 gap-x-[30px] items-center">
+                     <!-- Copyright text -->
+                     <div class="col-span-12 mb-0">
+                        <div class="md:text-center">
+                           <span class="inline-block font-medium font-urban text-[15px] text-gray-100 leading-[12px]">
+                              Full Copyright & Design By
+                              <a href="#" class="text-black"> AQLOVA</a> – 2026
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </div>
+
+  
+   <!-- JS here -->
+   <script src="js/jquery.js"></script>
+   <script src="js/plugin.js"></script>
+   <script src="js/swiper-bundle.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/nice-select.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/purecounter.js"></script>
+   <script src="js/isotope-pkgd.js"></script>
+   <script src="js/imagesloaded-pkgd.js"></script>
+   <script src="js/ajax-form.js"></script>
+   <script src="js/parallax-scroll.js"></script>
+   <script src="js/slider-init.js"></script>
+   <script src="js/main.js"></script>
+
+
+
+</body></html>
