@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title> Digital Transformation, Salesforce & MuleSoft Integration Services | ANKIRE
+</title>
+   <meta name="description" content=" ANKIRE delivers digital transformation consulting including Salesforce services, MuleSoft integrations, web development, and NABL calibration consultancy.
+">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+   <!-- CSS here -->
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/nice-select.css">
+   <link rel="stylesheet" href="css/flaticon.css">
+   <link rel="stylesheet" href="css/swiper-bundle.css">
+   <link rel="stylesheet" href="css/font-awesome-pro.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/cursor.css">
+
+</head>
+
+
+<body>
+   <!-- back-to-top-start  -->
+   <div class="back-to-top-wrapper group/show">
+      <button id="back_to_top" type="button"
+         class="scroll-top group-[.back-to-top-btn-show]/show:bottom-[80px] fixed right-[50px] bottom-[-10%] h-[50px] w-[50px] rounded-[6px] text-[16px] text-center cursor-pointer z-[9] border-0 bg-primary text-white transition-all duration-1000 ease-in-out">
+         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+               stroke-linejoin="round"></path>
+         </svg>
+      </button>
+   </div>
+   <!-- back-to-top-end  -->
+
+   <div class="mouseCursor cursor-outer"></div>
+   <div class="mouseCursor cursor-inner"><a href="#"><i class="fas fa-play"></i></a></div>
+
+
+   <div
+      class="tpoffcanvas fixed top-0 right-[-100%] h-full max-lg-w-[480px] bg-black z-[9999] p-[50px] overflow-y-auto opacity-0 invisible transition-all duration-700 ease-[cubic-bezier(0.785,0.135,0.15,0.86)] max-sm:w-[100%] max-sm:p-[35px] sm:p-[40px] [&.opened]:opacity-100 [&.opened]:visible [&.opened]:right-0">
+      <!-- Close Button -->
+      <button
+         class="close-btn cursor-pointer absolute top-0 right-0 w-[50px] h-[50px] bg-white text-black  flex items-center justify-center transition-all duration-300">
+         <i class="fal fa-times text-[30px] font-light"></i>
+      </button>
+      <!-- Logo -->
+      <div class="mb-10 text-center">
+         <a href="index.html">
+            <img src="images/logo-white.png" class="w-[157px] mx-auto" alt="">
+         </a>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="tp-offcanvas-menu mb-[50px]">
+         <nav></nav>
+      </div>
+
+   </div>
+   <!-- tp-header-area-start -->
+   <header>
+
+      <!-- header main start -->
+      <div id="header-sticky"
+         class="absolute group/sticky bg-white left-0 right-0 z-10 max-lg:pt-[15px] max-lg:pb-[15px] [&.header-sticky]:fixed [&.header-sticky]:top-0 [&.header-sticky]:left-0 [&.header-sticky]:right-0 [&.header-sticky]:w-full [&.header-sticky]:opacity-100 [&.header-sticky]:visible [&.header-sticky]:shadow-[0px_8px_24px_rgba(149,157,165,0.2)] [&.header-sticky]:z-[999] [&.header-sticky]:animate-[headerSlideDown_0.95s_ease_0s_forwards_1]">
+         <div class="mx-auto max-w-[1305px] px-[15px]">
+            <div class="grid grid-cols-12 gap-x-[30px] items-center">
+               <div class="xxl:col-span-2 xl:col-span-2 lg:col-span-2 col-span-6">
+                  <a href="index.html">
+                     <!-- <img src="images/logo-black.png" alt=""> -->ANKIRE
+                  </a>
+               </div>
+               <div class="xxl:col-span-8 xl:col-span-7 lg:col-span-8 hidden lg:block">
+                  <div class="main-menu hidden lg:block text-center">
+                     <nav class="tp-mobile-menu-active inline-block text-left">
+                        <ul class="lg:flex items-center xl:*:mx-[24px] lg:*:mx-[15px]">
+                           <li class="relative  group">
+                              <a href="index.html"
+                                 class="relative lg:py-[30px] max-lg:py-[15px] max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 group-hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]">
+                                 Home
+                              </a>
+
+                           </li>
+                           <li class="relative has-dropdown">
+                              <a href="about.html"
+                                 class="relative lg:py-[30px] max-lg:py-[15px] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 hover:text-primary group-[.header-sticky]/sticky:p-[30px_0] ">
+                                 About Us
+                              </a>
+                           </li>
+                           <li class="relative has-dropdown group">
+                              <a href="#"
+                                 class="relative lg:py-[30px] max-lg:py-[15px] max-lg:border-b max-lg:border-[rgba(255,255,255,0.1)] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 group-hover:text-primary group-[.header-sticky]/sticky:p-[30px_0]">
+                                 Services
+                              </a>
+                           </li>
+                           <li class="relative has-dropdown">
+                              <a href="#"
+                                 class="relative lg:py-[30px] max-lg:py-[15px] lg:inline-block max-lg:block lg:text-black max-lg:text-white text-[16px] font-medium transition-colors duration-300 hover:text-primary group-[.header-sticky]/sticky:p-[30px_0] ">
+                                 Industries We Serve
+                              </a>
+                           </li>
+                         
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            <div class="xxl:col-span-2 xl:col-span-3 lg:col-span-2 col-span-6">
+                  <div class="flex items-center justify-end">
+                     <a href="#"
+                        class="tp-btn-hover group relative hidden md:inline-block bg-[#FFCE5A] text-black h-[42px] leading-[38px] rounded-[30px] xl:px-[32px] max-xl:px-[18px] text-[16px] font-medium text-center capitalize overflow-hidden transition-colors duration-500 ease-in-out z-[2] border border-transparent hover:border-black">
+                        <span class="relative z-[5] transition-all duration-500 delay-100 group-hover:text-white">Contact US</span>
+                        <b
+                           class="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-black transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[700ms] ease-[ease] z-[1] group-hover:w-[400px] group-hover:h-[400px]"></b>
+                     </a>
+                     <button
+                        class="tp-menu-bar ml-[15px] cursor-pointer lg:hidden h-[45px] w-[45px] rounded-full flex items-center justify-center bg-white text-black text-[18px] max-lg:border max-lg:border-[rgba(000,000,000,0.06)] border border-transparent hover:bg-black hover:text-white  group-[.header-sticky]/sticky:border-[rgba(1,16,61,0.1)]">
+                        <i class="fal fa-bars"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header main end -->
+
+   </header>
+   <!-- tp-header-area-end -->
+
+
+
+   </header>
+   <!-- tp-header-area-end -->
+
+
+   <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+         <main>
+            <!-- tp-hero-area-start -->
+            <div
+               class="relative bg-[#f5f5f7] overflow-hidden xl:pt-[270px] xl:pb-[170px] lg:pt-[210px] lg:pb-[150px] md:pt-[160px] md:pb-[100px] max-md:pt-[160px] max-md:pb-[100px]">
+               <div class="absolute top-[14%] left-[-3%] animate-[moving_9s_linear_infinite]">
+                  <img src="images/hero-circle-5-1.png" alt="">
+               </div>
+               <div class="absolute top-[27%] left-[3%] animate-[movingleftright1_18s_linear_infinite]">
+                  <img src="images/hero-circle-5-2.png" alt="">
+               </div>
+               <div class="absolute bottom-[12%] left-[45%] animate-[moving_9s_linear_infinite]">
+                  <img src="images/hero-circle-5-3.png" alt="">
+               </div>
+               <div class="mx-auto max-w-[1305px] px-[15px]">
+                  <div class="grid grid-cols-12 items-center">
+                     <div class="col-span-12 xl:col-span-7 lg:col-span-6 order-2">
+                        <div class="relative z-10">
+                           <h3
+                              class="hero-text-anim-2 mb-[10px] text-black font-[200] 2xl:text-[74px] xxl:text-[55px] lg:leading-[0.85] lg:tracking-[-0.03em] overflow-hidden xl:text-[55px] lg:text-[47px] md:text-[57px] md:leading-[0.8] max-md:text-[35px] max-md:leading-[0.8] sm:text-[55px] sm:leading-[0.8]">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px] font-bold">Delivering
+                                    Seamless</i>
+                              </i><br class="max-xxl:hidden">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">
+
+                                    <span class="child-1 not-italic relative font-[700] tracking-[-0.03em] text-blue-4">
+                                       Salesforce & MuleSoft
+                                       <svg class="absolute left-0 bottom-0" width="300" height="12"
+                                          viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M275.982 1.4409C269.424 1.12484 262.867 0.892429 256.309 0.622849C254.145 0.529889 251.971 0.529918 249.807 0.483438C245.111 0.381188 240.414 0.288218 235.717 0.185959C233.104 0.130186 230.482 0.0651215 227.87 0.0186415C227.107 0.00934547 226.357 3.05176e-05 225.594 3.05176e-05C223.891 3.05176e-05 222.186 0.0185935 220.483 0.0278895C212.737 0.0371855 204.98 0.0464995 197.234 0.0464995C195.384 0.0464995 193.546 0.0836815 191.696 0.102274C187.122 0.148754 182.561 0.204559 177.998 0.251039C172.842 0.306819 167.696 0.325359 162.54 0.436918C154.2 0.604239 145.872 0.780908 137.531 0.948238C132.7 1.0505 127.88 1.10624 123.048 1.26427C114.731 1.54315 106.424 1.81274 98.1069 2.08232C93.567 2.23106 89.0159 2.35193 84.4759 2.56573C75.8782 2.96546 67.2803 3.35586 58.6825 3.75559C54.0866 3.9694 49.4906 4.12743 44.9058 4.45279C36.3417 5.05703 27.7888 5.66128 19.2246 6.26552C17.3749 6.39566 15.5254 6.52579 13.6758 6.65593C9.97655 6.91622 6.29982 7.32527 2.61185 7.66922C2.37644 7.69711 2.15225 7.72501 1.91685 7.7436C1.47968 7.84586 1.08733 8.03176 0.762257 8.30134C0.280242 8.70107 0 9.25882 0 9.82592C0 10.3929 0.280242 10.9507 0.762257 11.3597C1.19943 11.7222 1.96169 12.0569 2.61185 11.9919C7.06208 11.5735 11.5011 11.1366 15.9513 10.8206C20.0877 10.5324 24.2128 10.2349 28.3493 9.94672C32.8555 9.63072 37.3618 9.31462 41.8681 8.99854C43.684 8.86839 45.5 8.70109 47.3272 8.61743C54.3557 8.29207 61.3841 7.97597 68.4125 7.65061C72.7955 7.4461 77.1785 7.25092 81.5614 7.0464C83.3774 6.96274 85.1822 6.86047 86.9981 6.79539C93.9593 6.563 100.932 6.34917 107.893 6.13536C112.119 6.00522 116.333 5.86578 120.56 5.73564C121.983 5.68916 123.396 5.63337 124.819 5.60548C132.341 5.45675 139.863 5.31734 147.384 5.1779C151.588 5.09424 155.781 5.01986 159.985 4.9362C161.475 4.90831 162.977 4.86181 164.468 4.85251C172.225 4.78744 179.982 4.7224 187.739 4.65733C192.582 4.61085 197.413 4.57365 202.256 4.58295C210.495 4.60154 218.734 4.61082 226.962 4.62941C228.588 4.62941 230.213 4.68523 231.838 4.73171C236.389 4.84327 240.929 4.9548 245.481 5.06636C248.888 5.15002 252.296 5.23364 255.715 5.31731C258.136 5.37308 260.546 5.52184 262.967 5.6334C270.085 5.94946 277.204 6.28414 284.311 6.64668C286.115 6.73964 287.92 6.85116 289.725 6.96272C291.664 7.07427 293.603 7.19512 295.531 7.37174C295.834 7.40893 296.125 7.45543 296.428 7.5112C297.191 7.64135 297.919 7.60416 298.603 7.2788C299.231 6.97204 299.701 6.46075 299.903 5.8751C300.307 4.64803 299.41 3.33726 297.93 2.99331C296.63 2.69584 295.284 2.57504 293.951 2.46349C293.032 2.38912 292.124 2.30546 291.204 2.23109C289.445 2.08236 287.674 2.00794 285.913 1.89639C282.607 1.71977 279.289 1.59893 275.982 1.4409Z"
+                                             fill="#6B14FA"></path>
+                                       </svg>
+                                    </span>
+                                 </i>
+                              </i><br class="max-xxl:hidden">
+                              <i class="overflow-hidden inline-block">
+                                 <i class="child-2 not-italic inline-block translate-y-[150px] pb-[20px]">
+                                    <span class="child-2 not-italic font-[700] tracking-[-0.03em]">Integration Solutions
+                                 </i>
+                              </i>
+
+                           </h3>
+                           <p
+                              class=" font-medium leading-[28px] max-md:leading-[24px] max-md:text-[15px] pb-[45px] pr-[60px] text-[#141125]">
+                              Helping organizations modernize operations through Salesforce consulting, MuleSoft
+                              integrations, web development, and NABL calibration consultancy.
+
+                           </p>
+                           <div
+                              class="flex items-center gap-[15px] md:mb-[40px] max-sm:flex-wrap max-md:mb-[30px] wow fadeInUp"
+                              data-wow-duration=".9s" data-wow-delay=".7s">
+                              <a href="#"
+                                 class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-white bg-blue-4 rounded-[100px] shadow-[inset_-2px_-2px_2px_rgba(7,13,29,0.3)] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent">
+                                 <span class="relative z-[5] transition-[0.5s]">View Our Services
+                                 </span>
+                              </a>
+                              <!-- <a href="#" class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-black bg-white rounded-[100px] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent hover:text-white">
+                                 <span class="relative z-[5]  transition-[0.5s]">Try a Demo</span>
+                              </a> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div
+                  class="absolute 3xl:top-0 3xl:right-0 2xl:top-[-2%] 2xl:right-[-5%] xxl:top-[-6%] xxl:right-[-8%] xl:top-[-6%] xl:right-[-20%] lg:top-[-12%] lg:right-[-25%] max-lg:static">
+                  <div
+                     class="h-full w-full overflow-hidden bg-center bg-no-repeat [mask-image:url('../img/hero/hero-5.svg')] [-webkit-mask-image:url('../img/hero/hero-5.svg')] 3xl:scale-100 2xl:scale-[0.9] xxl:scale-[0.8] xl:scale-[0.8] lg:scale-[0.8] max-lg:[mask-image:none] max-lg:[-webkit-mask-image:none] max-sm:[mask-image:none] max-sm:[-webkit-mask-image:none]">
+                     <img class="mt-[60px] max-lg:mt-0 max-w-full" src="images/hero-shape-5-1-1.png" alt="">
+                  </div>
+                  <div
+                     class="hidden md:block absolute xl:top-[32%] xl:left-[35%] lg:top-[40%] lg:left-[38%] md:top-[52%] md:left-[38%] animate-[tptranslateX2_4s_infinite_alternate]">
+                     <img class="max-xxl:w-[70%] max-xl:w-[60%] max-lg:w-full" src="images/home-shape-1-1.png" alt="">
+                  </div>
+                  <div
+                     class="hidden md:block absolute xxl:bottom-[11%] xxl:left-[7%] xl:bottom-[19%] xl:left-[17%] lg:bottom-[30%] lg:left-[30%] max-lg:bottom-[11%] max-lg:left-[7%] animate-[tpupdown_1.5s_infinite_alternate]">
+                     <img
+                        class="h-full xxl:w-full xl:w-[80%] lg:w-[60%] rounded-[24px] shadow-[0px_30px_50px_rgba(18,17,22,0.04)] backdrop-blur-[10px]"
+                        src="images/home-shape-1-2.png" alt="">
+                  </div>
+               </div>
+            </div>
+            <!-- tp-hero-area-end -->
+
+
+            <!-- tp-feature-area-start -->
+            <div class="relative z-10  pt-[55px] pb-[170px]">
+               <!-- background shape -->
+               <div
+                  class="absolute left-0 xxl:bottom-[-125px] w-full -z-10 xl:bottom-[-15px] lg:bottom-[22px] md:bottom-[75px] sm:bottom-[90px] max-md:hidden">
+                  <img src="images/fea-bg-shape-1.png" alt="" class="w-full">
+               </div>
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="flex justify-center">
+                     <div class="text-center mb-[55px]">
+                        <h2 class="font-bold xl:text-[50px] leading-[1.2] md:text-[40px] sm:text-[33px] mb-3">Our
+                           Core Exciting Features</h2>
+                        <p class="text-gray-100">More than 15,000 companies trust and choose Itech</p>
+                     </div>
+                  </div>
+
+                  <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".4s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-1.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">A
+                           Salesforce Marketing Cloud</h3>
+                        <p class="pb-[7px] mb-[15px]">Personalized marketing automation across the entire customer
+                           lifecycle.</p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".6s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-2.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">
+                           Salesforce Sales & Service Cloud</h3>
+                        <p class="pb-[7px] mb-[15px]">Unified CRM platforms enabling better pipeline visibility and
+                           improved customer support.</p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group mb-[30px] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".8s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-3.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">
+                           MuleSoft Integration</h3>
+                        <p class="pb-[7px] mb-[15px]">API-led connectivity to integrate enterprise systems and unify
+                           siloed data.
+                        </p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".8s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-3.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">
+                           Web Design & Development</h3>
+                        <p class="pb-[7px] mb-[15px]"> Responsive digital experiences using modern HTML and CSS
+                           standards.
+                        </p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".8s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-3.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">
+                           NABL Calibration Consultancy</h3>
+                        <p class="pb-[7px] mb-[15px]">Support for laboratories pursuing ISO/IEC 17025 accreditation.
+                        </p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <!-- single feature -->
+                     <div
+                        class="bg-white shadow-[0_1px_3px_rgba(18,20,32,0.2)] rounded-[30px] p-[50px_40px] transition-all duration-300 hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] group wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".8s">
+                        <div class="mb-[35px]">
+                           <img src="images/fea-icon-3.png" alt=""
+                              class="transition-transform duration-500 group-hover:scale-x-[-1]">
+                        </div>
+                        <h3 class="font-bold xl:text-[24px] leading-[1.3] pb-[20px] lg:text-[20px] sm:text-[21px]">
+                           Instrument Procurement</h3>
+                        <p class="pb-[7px] mb-[15px]">Sourcing electro-technical, mechanical, and thermal measurement
+                           instruments.
+
+                        </p>
+                        <div class="inline-block">
+                           <a href="#"
+                              class="h-[44px] w-[44px] leading-[44px] bg-[rgba(41,93,251,0.1)] rounded-full flex items-center justify-center text-blue transition-all duration-300 hover:hover:[box-shadow:inset_0_0_0_30px_#6865FF] hover:text-white">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+            <!-- tp-feature-area-end -->
+
+            <!-- tp-about-area-start -->
+            <div class="relative z-10 md:pt-[100px] md:pb-[160px] sm:pt-[40px] sm:pb-[100px]">
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <div class="grid lg:grid-cols-2 gap-[30px] items-center">
+                     <!-- Left Images -->
+                     <div
+                        class="w-full max-lg:text-center lg:text-right relative lg:mb-0 md:mb-[150px] sm:mb-[140px] xs:mb-[70px] wow fadeInLeft"
+                        data-wow-duration=".9s" data-wow-delay=".2s">
+                        <!-- Background Shape -->
+                        <div class="absolute top-[-41%] xl:right-[-4px] lg:right-0 md:right-[-4px]">
+                           <img src="images/about-bg-shape.png" alt="">
+                        </div>
+                        <!-- Main Image -->
+                        <div class="relative xl:pr-[40px] lg:pr-0 animate-scale-up-down z-[1]">
+                           <img src="images/about-2.jpg" alt=""
+                              class="shadow-[0_16px_20px_10px_rgba(1,16,61,0.1)] rounded-[20px]">
+                        </div>
+
+                        <!-- Sub Image 1 -->
+                        <div
+                           class="absolute bottom-[-37%] z-[2] left-[42%] hidden sm:block animate-[tptranslateY_4s_forwards_infinite_alternate]">
+                           <img src="images/about-1.jpg" alt=""
+                              class="shadow-[10px_40px_40px_rgba(1,16,61,0.06),_-20px_-20px_120px_rgba(1,16,61,0.12)] rounded-[20px]">
+                        </div>
+
+                        <!-- Sub Image 2 -->
+                        <div
+                           class="absolute xl:top-[-24%] xl:left-[5%] hidden sm:block lg:top-[-35%] lg:left-0 max-lg:top-[-24%] max-lg:left-[5%] animate-tptranslate_X max-md:pt-[80px]">
+                           <img src="images/about-3.jpg" alt=""
+                              class="shadow-[10px_40px_40px_rgba(1,16,61,0.06),_-20px_-20px_120px_rgba(1,16,61,0.12)] rounded-[20px]">
+                        </div>
+
+                        <!-- Sub Image 3 -->
+                        <div class="absolute bottom-[-27%] left-[4%] hidden sm:block z-[3]">
+                           <img src="images/about-5.png" alt="" class="h-[170px] w-[150px]">
+                        </div>
+                     </div>
+                     <!-- Right Content -->
+                     <div class="w-full xxl:pl-[100px] xl:pl-[70px] lg:pl-[60px] md:pl-0 sm:pl-0 wow fadeInRight"
+                        data-wow-duration=".9s" data-wow-delay=".2s">
+                        <div class="pb-[20px]">
+                           <h2 class="font-bold  leading-[1.2] md:text-[40px] sm:text-[33px] mb-4">A Multidisciplinary
+                              Technology Partner</h2>
+                           <p class="text-[18px] leading-[28px] mb-[15px]">
+                              ANKIRE brings together expertise in digital transformation consulting, enterprise
+                              platforms, system connectivity, and precision engineering to help organizations operate
+                              smarter and more efficiently.
+                           </p>
+                           <p class="text-[18px] leading-[28px] mb-[15px]">
+                              Our team delivers scalable solutions using Salesforce platforms and MuleSoft integration
+                              architecture, enabling businesses to unify systems, streamline workflows, and enhance
+                              customer experiences.
+                           </p>
+                        </div>
+                        <!-- List -->
+                        <div class="pb-[45px]">
+                           <ul>
+                              <li
+                                 class="font-medium text-[16px] leading-[1.1] relative pl-[30px] mb-[30px] text-black last:mb-0">
+                                 <i
+                                    class="fal fa-check absolute top-0 left-0 h-[20px] w-[20px] leading-[20px!important] text-center rounded-full text-[8px] text-white bg-red"></i>
+                                 NABL-accredited calibration services.
+                              </li>
+                              <li
+                                 class="font-medium text-[16px] leading-[1.1] relative pl-[30px] mb-[30px] text-black last:mb-0">
+                                 <i
+                                    class="fal fa-check absolute top-0 left-0 h-[20px] w-[20px] leading-[20px!important] text-center rounded-full text-[8px] text-white bg-red"></i>
+                                 Digital transformation solutions.
+                              </li>
+                              <li class="font-medium text-[16px] leading-[1.1] relative pl-[30px] text-black">
+                                 <i
+                                    class="fal fa-check absolute top-0 left-0 h-[20px] w-[20px] leading-[20px!important] text-center rounded-full text-[8px] text-white bg-red"></i>
+                                 Reliable operational performance support.
+                              </li>
+                           </ul>
+                        </div>
+
+                        <!-- Button -->
+                        <div>
+                           <a href="about.html"
+                              class="tp-btn-hover group relative hidden md:inline-block bg-blue text-white h-[45px] leading-[45px] rounded-[30px] px-[35px] text-[15px] font-semibold text-center capitalize overflow-hidden transition-colors duration-500 ease-in-out z-[2]">
+                              <span
+                                 class="relative z-[5] transition-all duration-500 delay-100 group-hover:text-white">About
+                                 Us</span>
+                              <b
+                                 class="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-black transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[700ms] ease-[ease] z-[1] group-hover:w-[400px] group-hover:h-[400px]"></b>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-about-area-end -->
+
+            <!-- tp-services-area-start -->
+            <div class="relative">
+               <!-- Grey Shape Background -->
+               <div class="absolute bottom-0 left-0 w-full h-[60px] bg-gray-700 -z-[1]"></div>
+
+               <div class="mx-auto max-w-[1200px] px-[15px]">
+                  <!-- Section Title -->
+                  <div class="text-center mb-[50px] tp-title-anim">
+                     <h2 class="font-bold xl:text-[50px] leading-[1.2] md:text-[40px] sm:text-[33px] mb-3">Industries We
+                        Serve
+                     </h2>
+                     <p class="text-[18px] leading-[28px] mb-[15px]">More than 15,000 companies trust and choose Itech
+                     </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] items-start">
+                     <!-- Service item -->
+                     <div
+                        class="border group border-[rgba(1,16,61,0.08)] rounded-[30px] p-[50px_42px] transition duration-300 hover:border-[#E8EAF1] hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".4s">
+                        <div class="mb-[25px] group-hover:animate-icon-bounce inline-block">
+                           <img src="images/sv-icon-1.png" alt="">
+                        </div>
+                        <div class="mb-4">
+                           <h3 class="font-bold lg:text-[22px] leading-[1.1] pb-[5px] mb-2 md:text-[20px]">
+                              <a href="#" class="hover:text-orange">Laboratories & Testing
+                                 Facilities</a>
+                           </h3>
+                           <p class="pb-[7px] mb-[15px]"> NABL calibration consultancy and ISO/IEC 17025 support.</p>
+                        </div>
+                        <a href="#"
+                           class="h-[44px] w-[44px] leading-[44px] rounded-full bg-[rgba(41,93,251,0.1)] flex items-center justify-center text-[#295DFB] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(41,93,251,0.25),inset_0_0_0_30px_#6865FF] hover:text-white">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <!-- Service item -->
+                     <div
+                        class="border group border-[rgba(1,16,61,0.08)] rounded-[30px] p-[50px_42px] transition duration-300 hover:border-[#E8EAF1] hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".6s">
+                        <div class="mb-[25px] group-hover:animate-icon-bounce inline-block">
+                           <img src="images/sv-icon-2.png" alt="">
+                        </div>
+                        <div class="mb-4">
+                           <h3 class="font-bold lg:text-[22px] leading-[1.1] pb-[5px] mb-2 md:text-[20px]">
+                              <a href="#" class="hover:text-blue">Manufacturing & Industrial
+                                 Organizations</a>
+                           </h3>
+                           <p class="pb-[7px] mb-[15px]">CRM platforms, system integrations, calibration services.
+                           </p>
+                        </div>
+                        <a href="#"
+                           class="h-[44px] w-[44px] leading-[44px] rounded-full bg-[rgba(41,93,251,0.1)] flex items-center justify-center text-[#295DFB] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(41,93,251,0.25),inset_0_0_0_30px_#6865FF] hover:text-white">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <!-- Service item -->
+                     <div
+                        class="border group border-[rgba(1,16,61,0.08)] rounded-[30px] p-[50px_42px] transition duration-300 hover:border-[#E8EAF1] hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div class="mb-[25px] group-hover:animate-icon-bounce inline-block">
+                           <img src="images/sv-icon-3.png" alt="">
+                        </div>
+                        <div class="mb-4">
+                           <h3 class="font-bold lg:text-[22px] leading-[1.1] pb-[5px] mb-2 md:text-[20px]">
+                              <a href="#" class="hover:text-purple">Technology & Digital
+                                 Businesses</a>
+                           </h3>
+                           <p class="pb-[7px] mb-[15px]">Salesforce consulting, MuleSoft integrations, web platforms.
+                           </p>
+                        </div>
+                        <a href="#"
+                           class="h-[44px] w-[44px] leading-[44px] rounded-full bg-[rgba(41,93,251,0.1)] flex items-center justify-center text-[#295DFB] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(41,93,251,0.25),inset_0_0_0_30px_#6865FF] hover:text-white">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <!-- Service item -->
+                     <div
+                        class="border group border-[rgba(1,16,61,0.08)] rounded-[30px] p-[50px_42px] transition duration-300 hover:border-[#E8EAF1] hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".8s">
+                        <div class="mb-[25px] group-hover:animate-icon-bounce">
+                           <img src="images/sv-icon-4.png" alt="">
+                        </div>
+                        <div class="mb-4">
+                           <h3 class="font-bold lg:text-[22px] leading-[1.1] pb-[5px] mb-2 md:text-[20px]">
+                              <a href="#" class="hover:text-green">Engineering & Technical
+                                 Services</a>
+                           </h3>
+                           <p class="pb-[7px] mb-[15px]">Integration solutions and measurement systems.</p>
+                        </div>
+                        <a href="#"
+                           class="h-[44px] w-[44px] leading-[44px] rounded-full bg-[rgba(41,93,251,0.1)] flex items-center justify-center text-[#295DFB] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(41,93,251,0.25),inset_0_0_0_30px_#6865FF] hover:text-white">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <!-- Service item -->
+                     <div
+                        class="border group border-[rgba(1,16,61,0.08)] rounded-[30px] p-[50px_42px] transition duration-300 hover:border-[#E8EAF1] hover:shadow-[0_20px_30px_rgba(1,6,20,0.1)] wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay=".9s">
+                        <div class="mb-[25px] group-hover:animate-icon-bounce">
+                           <img src="images/sv-icon-5.png" alt="">
+                        </div>
+                        <div class="mb-4">
+                           <h3 class="font-bold lg:text-[22px] leading-[1.1] pb-[5px] mb-2 md:text-[20px]">
+                              <a href="#" class="hover:text-yellow">Professional Training &
+                                 Education</a>
+                           </h3>
+                           <p class="pb-[7px] mb-[15px]">Training in Salesforce, MuleSoft and web technologies.
+                           </p>
+                        </div>
+                        <a href="#"
+                           class="h-[44px] w-[44px] leading-[44px] rounded-full bg-[rgba(41,93,251,0.1)] flex items-center justify-center text-[#295DFB] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(41,93,251,0.25),inset_0_0_0_30px_#6865FF] hover:text-white">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
+                                 stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <!-- Dashboard Service -->
+                     <div
+                        class="relative overflow-hidden rounded-[30px] h-[500px] bg-no-repeat bg-cover bg-center wow fadeInUp"
+                        data-wow-duration=".9s" data-wow-delay="1s"
+                        data-background="https://html.aqlova.com/softec-prev/softec/assets/img/service/sv-bg.jpg">
+                        <div class="p-[57px_40px_20px_40px] text-white">
+                           <h3 class="font-bold xl:text-[30px] leading-[1.2] mb-2 lg:text-[26px] text-white"> Data
+                              Analysis <br class="xl:block max-xl:hidden"> Tools & Methods </h3>
+                           <p class="font-medium text-[15px] leading-[24px] text-white opacity-70 pb-[10px] mb-[15px]">
+                              Lorem Ipsum is simply dummy text<br class="xl:block max-xl:hidden"> of the printing</p>
+                           <a href="project-details.html"
+                              class="tp-btn-hover group relative inline-block bg-orange text-white h-9 px-[25px] leading-9 rounded-[30px] text-[15px] font-semibold text-center capitalize overflow-hidden transition-colors duration-500 ease-in-out z-[2]">
+                              <span
+                                 class="relative z-[5] transition-all duration-500 delay-100 group-hover:text-black">Work
+                                 with Us</span>
+                              <b
+                                 class="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[700ms] ease-[ease] z-[1] group-hover:w-[400px] group-hover:h-[400px]"></b>
+                           </a>
+                        </div>
+                        <div class="mr-[-150px]">
+                           <img class="wow fadeInRight" data-wow-duration=".9s" data-wow-delay=".7s"
+                              src="images/sv-dashbord.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-services-area-end -->
+
+            <!-- Project Section start-->
+            <div class="bg-gray-700 pt-12 pb-[110px]">
+
+               <div class="relative">
+                  <div class="mx-auto max-w-[1200px] px-[15px]">
+                     <div class="grid grid-cols-12 gap-[30px] items-center">
+                        <div class="lg:col-span-6 col-span-12">
+                           <div class="relative text-center wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".5s"
+                              style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                             <img src="https://html.aqlova.com/softec-prev/softec/assets/img/card/sale-1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="lg:col-span-6 col-span-12">
+                           <div class="xl:pr-[60px] lg:pl-[40px] max-xl:pr-0 max-lg:pl-0 max-lg:mt-[40px]">
+                              <div class="mb-[40px]">
+
+                                 <h3
+                                    class="font-bold xl:text-[50px] leading-[1.2] md:text-[40px] sm:text-[33px] mb-3">
+                                   Why ANKIRE
+</h3>
+                              </div>
+                              <div class="mb-[50px]">
+                                 <div class="flex items-center pb-[29px] mb-[27px] border-b border-[#DFDFEA]">
+                                    
+                                    <p
+                                       class="font-medium xxl:text-[20px] xl:text-[19px] max-xl:text-[18px] max-sm:text-[17px] sm:leading-7 max-sm:leading-[23px] font-mont text-black">
+                                       Project-Centric Training – Hands-on training focused on real-world implementations.
+</p>
+                                 </div>
+                                 <div class="flex items-center pb-[29px] mb-[27px] border-b border-[#DFDFEA]">
+                                
+                                    <p
+                                       class="font-medium xxl:text-[20px] xl:text-[19px] max-xl:text-[18px] max-sm:text-[17px] sm:leading-7 max-sm:leading-[23px] font-mont text-black">
+                                       Dual Expertise – Combination of enterprise IT consulting and industrial calibration services.
+</p>
+                                 </div>
+                                 <div class="flex items-center ">
+                                 
+                                    <p
+                                       class="font-medium xxl:text-[20px] xl:text-[19px] max-xl:text-[18px] max-sm:text-[17px] sm:leading-7 max-sm:leading-[23px] font-mont text-black">
+                                       Scalable Solutions – Services designed to adapt and grow with business needs.
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="tp-account-btn-box">
+                                 <a href="#"
+                                 class="relative inline-block h-[60px] leading-[61px] max-md:h-[50px] max-md:leading-[50px] px-[35px] max-md:px-[25px] font-[700] text-[16px] tracking-[0.02em] text-white bg-blue-4 rounded-[100px] shadow-[inset_-2px_-2px_2px_rgba(7,13,29,0.3)] overflow-hidden z-[1] transition-all duration-[1000ms] after:content-[''] after:absolute after:left-0 after:right-0 after:top-[-100%] after:bottom-[-100%] after:w-full after:bg-black after:rounded-[95px] after:scale-y-0 after:origin-bottom after:transition-transform after:duration-[1000ms] after:[transition-timing-function:cubic-bezier(.14,0,0,1.01)] after:will-change-transform after:z-[-1] hover:after:scale-y-100 hover:after:origin-top hover:bg-transparent">
+                                 <span class="relative z-[5] transition-[0.5s]">Learn more about our approach 
+                                 </span>
+                              </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+            <!-- Project Section end-->
+
+         </main>
+
+         <footer class="xxl:pb-[50px] xl:pb-0">
+            <div class="relative">
+               <div class="tp-gsap-bg bg-black absolute top-0 left-0 right-0 w-full h-full text-center m-auto -z-10">
+               </div>
+               <div class="relative pt-[50px]">
+                  <div class="mx-auto max-w-[1200px] px-[15px]">
+
+
+                     <!-- Widget section -->
+                     <div class="mt-[60px] border-b border-white/10 pb-14 grid grid-cols-12 gap-x-[30px]">
+                        <!-- Column 1 -->
+                        <div class="xl:col-span-4 lg:col-span-4 md:col-span-7 col-span-12 pb-10 wow fadeInUp"
+                           data-wow-duration=".9s" data-wow-delay=".5s">
+                           <a href="index.html" class="inline-block mb-2.5">
+                              ANKIRE
+                              <!-- <img src="images/logo-white.png" alt="Logo"> -->
+                           </a>
+                           <p class="text-white text-base leading-[26px] mb-5 pb-3">
+                              ANKIRE Consulting and Technologies enables organizations to build connected digital
+                              platforms and reliable technical environments through Salesforce solutions, MuleSoft
+                              integrations, and calibration services.
+                           </p>
+                           <div class="flex space-x-2">
+                              <a href="#"
+                                 class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-primary rounded-full text-gray-200 hover:bg-primary hover:text-white transform transition-transform duration-300 hover:scale-110">
+                                 <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href="#"
+                                 class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-primary rounded-full text-gray-200 hover:bg-primary hover:text-white transform transition-transform duration-300 hover:scale-110">
+                                 <svg class="-translate-y-[2px] relative z-[1]" xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="14" viewBox="0 0 16 14" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M5.28884 0.714844H0.666992L6.14691 7.9153L1.01754 13.9556H3.38746L7.26697 9.38713L10.7118 13.9136H15.3337L9.69453 6.50391L9.70451 6.51669L14.5599 0.798959H12.19L8.58427 5.04503L5.28884 0.714844ZM3.21817 1.97588H4.65702L12.7825 12.6525H11.3436L3.21817 1.97588Z"
+                                       fill="currentColor"></path>
+                                 </svg>
+                              </a>
+                              <a href="#"
+                                 class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-primary rounded-full text-gray-200 hover:bg-primary hover:text-white transform transition-transform duration-300 hover:scale-110">
+                                 <i class="fab fa-linkedin-in"></i>
+                              </a>
+
+                           </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="xl:col-span-3 lg:col-span-3 md:col-span-5 col-span-12 pb-10 wow fadeInUp"
+                           data-wow-duration=".9s" data-wow-delay=".7s">
+                           <h2 class="text-white font-bold text-lg mb-8">What We Do</h2>
+                           <ul class="text-[#f5f5fa99] font-medium space-y-5">
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Salesforce Marketing
+                                    Cloud</a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Salesforce Sales &
+                                    Service Cloud</a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">MuleSoft
+                                    Integration</a>
+                              </li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Web Design &
+                                    Development </a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">NABL Calibration
+                                    Consultancy</a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Instrument
+                                    Procurement</a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Installation &
+                                    Maintenance </a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Professional Training
+                                 </a></li>
+                           </ul>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="xl:col-span-2 lg:col-span-2 md:col-span-6 col-span-12 pb-10 wow fadeInUp"
+                           data-wow-duration=".9s" data-wow-delay=".9s">
+                           <h2 class="text-white font-bold text-lg mb-8">Other Pages</h2>
+                           <ul class="text-[#f5f5fa99] font-medium space-y-5">
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">About </a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Services </a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Industries </a></li>
+                              <li><a href="#" class="hover:text-white hover:ml-1 transition-all">Contact</a></li>
+                           </ul>
+                        </div>
+
+                        <!-- Column 4 -->
+                        <div class="xl:col-span-3 lg:col-span-3 sm:col-span-6 col-span-12 pb-10 wow fadeInUp"
+                           data-wow-duration=".9s" data-wow-delay="1s">
+                           <div class="min-md:pl-[25px]">
+                              <h2 class="text-white font-bold text-lg mb-8">Contact Us</h2>
+                              <ul>
+                                 <!-- Phone -->
+                                 <li class="relative pl-[35px] mb-[18px] last:mb-0">
+                                    <span class="absolute top-0 left-0">
+                                       <svg width="22" height="22" viewBox="0 0 26 26" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M14.332 1C14.332 1 17.2651 1.26664 20.9981 4.99966C24.7311 8.73267 24.9978 11.6658 24.9978 11.6658"
+                                             stroke="#FF3C82" stroke-width="2" stroke-linecap="round"></path>
+                                          <path
+                                             d="M14.6079 5.71289C14.6079 5.71289 15.9277 6.08998 17.9075 8.06971C19.8872 10.0494 20.2643 11.3693 20.2643 11.3693"
+                                             stroke="#FF3C82" stroke-width="2" stroke-linecap="round"></path>
+                                          <path opacity="0.5"
+                                             d="M9.04943 5.42369L9.91471 6.97413C10.6956 8.37332 10.3821 10.2088 9.15225 11.4387C9.15225 11.4387 9.15225 11.4387 9.15225 11.4387C9.15213 11.4388 7.66057 12.9306 10.3652 15.6352C13.0692 18.3392 14.561 16.849 14.5618 16.8482C14.5618 16.8482 14.5618 16.8482 14.5618 16.8482C15.7917 15.6183 17.6271 15.3049 19.0263 16.0857L20.5768 16.951C22.6896 18.1301 22.9391 21.0931 21.082 22.9502C19.9661 24.0661 18.599 24.9344 17.0878 24.9917C14.5439 25.0882 10.2236 24.4443 5.88985 20.1106C1.55612 15.7769 0.912294 11.4566 1.00873 8.91261C1.06602 7.40143 1.93432 6.03439 3.05023 4.91848C4.90734 3.06137 7.87031 3.31089 9.04943 5.42369Z"
+                                             stroke="#FF3C82" stroke-width="2" stroke-linecap="round"></path>
+                                       </svg>
+                                    </span>
+                                    <a href="tel:+806(000)8899"
+                                       class="font-medium hover:text-red text-[20px] leading-[24px] text-[#F5F5FA]">+000
+                                       (000) 00 00</a>
+                                 </li>
+
+                                 <!-- Email -->
+                                 <li class="relative pl-[35px] mb-[18px]">
+                                    <span class="absolute top-0 left-0">
+                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 10.2797 1.30049 11.4893 1.83477 12.562C1.97675 12.847 2.02401 13.1729 1.94169 13.4805L1.46521 15.2613C1.25836 16.0344 1.96561 16.7416 2.73868 16.5348L4.51951 16.0583C4.82715 15.976 5.15297 16.0233 5.43802 16.1652C6.51069 16.6995 7.72025 17 9 17Z"
+                                             stroke="#FF3C82" stroke-width="1.5"></path>
+                                          <path opacity="0.5" d="M5.7998 7.80078H12.1998" stroke="#FF3C82"
+                                             stroke-width="1.5" stroke-linecap="round"></path>
+                                          <path opacity="0.5" d="M5.7998 10.6006H10.1998" stroke="#FF3C82"
+                                             stroke-width="1.5" stroke-linecap="round"></path>
+                                       </svg>
+                                    </span>
+                                    <a href="mailto:contact@info.com"
+                                       class="font-normal hover:text-red text-[15px] leading-[20px] text-[#F5F5FA]">contact@info.com</a>
+                                 </li>
+
+                                 <!-- Address -->
+                                 <li class="relative pl-[35px] mb-0">
+                                    <span class="absolute top-0 left-0">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path opacity="0.5"
+                                             d="M3.7002 6.86317C3.7002 3.62503 6.5208 1 10.0002 1C13.4796 1 16.3002 3.62503 16.3002 6.86317C16.3002 10.0759 14.2895 13.8249 11.1523 15.1656C10.4209 15.4781 9.57947 15.4781 8.84814 15.1656C5.71094 13.8249 3.7002 10.0759 3.7002 6.86317Z"
+                                             stroke="#FF3C82" stroke-width="1.5"></path>
+                                          <path
+                                             d="M11.8002 7.3C11.8002 8.29411 10.9943 9.1 10.0002 9.1C9.00608 9.1 8.2002 8.29411 8.2002 7.3C8.2002 6.30589 9.00608 5.5 10.0002 5.5C10.9943 5.5 11.8002 6.30589 11.8002 7.3Z"
+                                             stroke="#FF3C82" stroke-width="1.5"></path>
+                                          <path
+                                             d="M18.0645 13.1504C18.6633 13.6926 19 14.3038 19 14.9504C19 17.1871 14.9706 19.0004 10 19.0004C5.02944 19.0004 1 17.1871 1 14.9504C1 14.3038 1.33671 13.6926 1.93552 13.1504"
+                                             stroke="#FF3C82" stroke-width="1.5" stroke-linecap="round"></path>
+                                       </svg>
+                                    </span>
+                                    <a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z" target="_blank"
+                                       class="font-normal hover:text-red text-[15px] leading-[20px] text-[#F5F5FA]">
+                                       1234 North Avenue Luke Lane, South Bend,
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </footer>
+      </div>
+   </div>
+
+
+   <!-- JS here -->
+   <script src="js/jquery.js"></script>
+   <script src="js/plugin.js"></script>
+   <script src="js/swiper-bundle.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/purecounter.js"></script>
+   <script src="js/nice-select.js"></script>
+   <script src="js/isotope-pkgd.js"></script>
+   <script src="js/imagesloaded-pkgd.js"></script>
+   <script src="js/ajax-form.js"></script>
+   <script src="js/slider-init.js"></script>
+   <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
